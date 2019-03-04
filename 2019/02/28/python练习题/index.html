@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  
+      <title>Python练习题 - IZhaoJian</title>
+  
+
+  
+  
+  <meta name="description" content>
+  <meta name="author" content="ZhaoJian">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- load loadjs.js -->
+  <script src="/libs/loadjs/dist/loadjs.min.js"></script>
+
+<link rel="stylesheet" href="/libs/animate.css/animate.min.css">
+  <!-- load lightgallery -->
+<link rel="stylesheet" href="/css/lightgallery.css">
+<link rel="stylesheet" href="/libs/noty/lib/noty.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/taurus.css">
+    
+        <link rel="stylesheet" href="/css/scheme-taurus/animations.css">
+    
+
+
+<link rel="stylesheet" href="/.css">
+
+  <!-- load font awesome 5 -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+  </script>
+  <!-- load mathjax -->
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax//libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  <!-- load js-cookie -->
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/js/social-share.min.js"></script>
+    <script src="/js/theme.js"></script>
+
+  <!-- include cookie.js -->
+  
+  
+
+  <!-- include comment system code -->
+  
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+ 
+
+<header id="header" class="header">
+	<div class="header-title">
+		
+		<div class="header-logo">
+			<a href="/">
+				<img src="/images/theme-icon.svg">
+			</a>
+		</div>
+		<div class="header-text">
+			<h1>
+				<a href="/">IZhaoJian</a>
+			</h1>
+			<subtitle>
+				
+			</subtitle>
+		</div>
+		
+	</div>
+	<div id="header-nav">
+		
+
+
+
+<nav id="nav">
+	
+	
+		
+			
+		
+		
+			<div class="nav-item">
+				
+					<div class="nav-name">
+				
+					<a class="nav-link" href="/categories/项目/">
+						<span>项目 </span>
+					</a>
+				</div>
+			</div>
+		
+	
+		
+			
+		
+		
+			<div class="nav-item">
+				
+					<div class="nav-name">
+				
+					<a class="nav-link" href="/categories/笔记/">
+						<span>笔记 </span>
+					</a>
+				</div>
+			</div>
+		
+	
+	
+	<div class="nav-item" id="nav-item-toc">
+		
+
+
+<div class="toc-container">
+<i class="far fa-times-circle" id="toc-close" onclick="closeTOC(event);" ontouchstart="closeTOC(event);"></i>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第一阶段"><span class="toc-number">1.</span> <span class="toc-text">第一阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一节：字符串操作练习题"><span class="toc-number">1.1.</span> <span class="toc-text">第一节：字符串操作练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二节：序列操作练习题"><span class="toc-number">1.2.</span> <span class="toc-text">第二节：序列操作练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三节：字典操作习题"><span class="toc-number">1.3.</span> <span class="toc-text">第三节：字典操作习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第四节：基础数据类型综合练习题"><span class="toc-number">1.4.</span> <span class="toc-text">第四节：基础数据类型综合练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第五节：函数基础练习题"><span class="toc-number">1.5.</span> <span class="toc-text">第五节：函数基础练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第六节：函数进阶练习题"><span class="toc-number">1.6.</span> <span class="toc-text">第六节：函数进阶练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第七节：高阶函数练习题"><span class="toc-number">1.7.</span> <span class="toc-text">第七节：高阶函数练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第八节：面向对象练习题"><span class="toc-number">1.8.</span> <span class="toc-text">第八节：面向对象练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第九节：文件操作练习题"><span class="toc-number">1.9.</span> <span class="toc-text">第九节：文件操作练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第十节：进程操、线程、协程练习题"><span class="toc-number">1.10.</span> <span class="toc-text">第十节：进程操、线程、协程练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第十一节：sorcket练习题"><span class="toc-number">1.11.</span> <span class="toc-text">第十一节：sorcket练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第十二节：杂项练习"><span class="toc-number">1.12.</span> <span class="toc-text">第十二节：杂项练习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正则练习"><span class="toc-number">1.13.</span> <span class="toc-text">正则练习</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#web阶段"><span class="toc-number">2.</span> <span class="toc-text">web阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Django-xadmin-打造线上教育平台（设计概要）"><span class="toc-number">2.1.</span> <span class="toc-text">Django+xadmin 打造线上教育平台（设计概要）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#互联网-废品回收项目概要设计"><span class="toc-number">2.2.</span> <span class="toc-text">互联网+废品回收项目概要设计</span></a></li></ol></li></ol>
+</div>
+<div class="toc-button" onclick="toggleTOC(event);" ontouchstart="toggleTOC(event);">
+    <img src="/images/icons/blue-shadow/toc.svg" alt>
+</div>
+
+	</div>
+	
+	<div class="nav-item" id="nav-item-archive">
+		
+				<div class="nav-icon">
+				
+			<a href="/archives/" title="归档">
+			<img src="/images/icons/blue-shadow/archive.svg" alt>
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id="nav-item-search">
+		
+		<div class="nav-icon">
+		
+			<a href="/search/" title="搜索">
+			<img src="/images/icons/blue-shadow/search.svg" alt>
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id="nav-item-more">
+		<div class="nav-icon">
+				<a href="#" onclick="onClickMenuIcon(event);" ontouchstart="onClickMenuIcon(event);">
+				<img src="/images/icons/blue-shadow/menu.svg" alt>
+				</a>
+		</div>
+		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id="nav-more-menu-close" onclick="onClickNavMenuClose(event);" ontouchstart="onClickNavMenuClose(event);"></i>
+		
+			
+			
+				
+					
+				
+			
+				
+			
+		
+		
+			
+			
+				
+			
+				
+					
+				
+			
+		
+		
+		
+		<div class="nav-more-item">
+				<div class="nav-name">
+					<a class="nav-link" href="/categories/项目/">
+						<span>项目</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class="nav-more-item">
+				<div class="nav-name">
+					<a class="nav-link" href="/categories/笔记/">
+						<span>笔记</span>
+					</a>
+				</div>
+		</div>
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+</header>
+
+ 
+
+  
+
+
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div style="flex: 1;">
+      <style>
+    body {
+        background-color: white;
+    }
+</style>
+
+
+
+
+
+
+
+
+    
+        
+            
+            
+        
+    
+
+
+
+
+
+
+    
+    
+        
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+
+
+<article class="article" id="/2019/02/28/python练习题/" data-name="Python练习题" data-version>
+
+    <!-- Title -->
+    <div class="article-header">
+         
+         <h1 class="article-title">
+            <a href="/2019/02/28/python练习题/">
+                Python练习题
+            </a>
+        </h1>
+        <!-- TODO: support nested categories,display them nicely -->
+        
+        <ul class="article-categories">
+            
+            
+                <li><a href="/categories/笔记/" data-no-instant>
+                    <img src="/images/笔记.svg" alt="笔记" onerror="if(this.src != " images uncategorized.svg") this.src="/images/uncategorized.svg" " title="笔记">
+                </a></li>
+            
+        </ul>
+        
+    </div>
+    
+    <!-- Date and Author -->
+    <div class="article-meta">
+    <ul>
+            <li><i class="fa fa-calendar"></i> 2019-02-28</li>
+            
+            <li><i class="fa fa-eye"></i> <span id="busuanzi_container_site_uv"><span id="busuanzi_value_site_uv"></span></span></li>
+            <li><i class="fa fa-user"></i> ZhaoJian</li>
+            <li><i class="fas fa-copyright"></i>
+            
+                
+                
+            
+            
+                <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
+            
+            </li>
+    </ul>
+    
+<div class="tags">
+	
+		
+			<label class="tag-1"><a href="/tags/Python，习题/">Python，习题</a></label>
+		
+	
+	</div>
+
+    </div>
+    <div class="article-cards">
+        <!-- Author Card -->
+        <!---
+        <div class='Card-article Card-author'>
+            <div class='card-title'>
+                <h3></h3>
+            </div>
+            <div class='card-content'>
+                    <div class="author-meta">
+                            <div class='author-figure'>
+                                <img src="" alt="">
+                            </div>
+                            <div class='author-name'>
+                                ZhaoJian
+                            </div>
+                        </div>
+                        <div class="author-ai">
+                            <div class='author-intro'>
+                                <!-- TODO: auto generating author description -->
+                                <!-- 
+                            </div>
+                            <div class="author-articles">
+                                <!-- TODO: auto generating author articles -->
+                                <!-- <ul>
+                                    <li>Article 1</li>
+                                    <li>Article 2</li>
+                                    <li>Article 3</li>
+                                    <li>Article 4</li>
+                                    <li>Article 5</li>
+                                    <li>Article 6</li>
+                                </ul>
+                            </div>
+                        </div>
+            </div>
+            
+        </div> -->
+
+        <!-- Visit Card -->
+        <!-- <div class="Card-article Card-visit"> -->
+            <!-- <div class="card-title">
+  <h3>Post Visit</h3>
+</div>
+<div class="card-chart">
+  <div id="chart-post-visit"></div>
+</div> -->
+        <!-- </div> -->
+        
+        <!-- Auto Excerpt Card -->
+        <!-- <div class="Card-article Card-excerpt">
+            <div class="card-title">
+  <h3>Quick Read</h3>
+</div>
+<div class="card-text">
+  <p id="text-post-summary">第一阶段第一节：字符串操作练习题
+已知字符串 a = “aAsmr3idd4bgs7Dlsf9eAF”,要求如下 
+
+请将a字符串的大写改为小写，小写改为大写。
+将a字符串的数字取出，并输出成一个新的字符串。
+请去除a字符串多次出现的字母，仅留最先出现的一个。例 ‘abcabb’，经过去除后，输出 ‘abc’
+请将a字符串反转并输出。例：’abc’的反转是’cba’
+去除a字符串内的数字后，请将该字符串里的单词重新排序（a-z），并且重新输出一个排序后的字符 串。（保留大小写,a与A的顺序关系为：A在a前面。例：AaBb）
+请判断...</p>
+</div>
+        </div> -->
+    </div>
+    
+    <!-- Gallery -->
+    <!-- TODO: add a slider to gallery -->
+    
+
+    <!-- Content -->
+    <!-- TODO: support table of content -->
+    <div class="article-toc" id="article-toc">
+    
+        
+
+
+<div class="toc-container">
+<i class="far fa-times-circle" id="toc-close" onclick="closeTOC(event);" ontouchstart="closeTOC(event);"></i>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第一阶段"><span class="toc-number">1.</span> <span class="toc-text">第一阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一节：字符串操作练习题"><span class="toc-number">1.1.</span> <span class="toc-text">第一节：字符串操作练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二节：序列操作练习题"><span class="toc-number">1.2.</span> <span class="toc-text">第二节：序列操作练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三节：字典操作习题"><span class="toc-number">1.3.</span> <span class="toc-text">第三节：字典操作习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第四节：基础数据类型综合练习题"><span class="toc-number">1.4.</span> <span class="toc-text">第四节：基础数据类型综合练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第五节：函数基础练习题"><span class="toc-number">1.5.</span> <span class="toc-text">第五节：函数基础练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第六节：函数进阶练习题"><span class="toc-number">1.6.</span> <span class="toc-text">第六节：函数进阶练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第七节：高阶函数练习题"><span class="toc-number">1.7.</span> <span class="toc-text">第七节：高阶函数练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第八节：面向对象练习题"><span class="toc-number">1.8.</span> <span class="toc-text">第八节：面向对象练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第九节：文件操作练习题"><span class="toc-number">1.9.</span> <span class="toc-text">第九节：文件操作练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第十节：进程操、线程、协程练习题"><span class="toc-number">1.10.</span> <span class="toc-text">第十节：进程操、线程、协程练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第十一节：sorcket练习题"><span class="toc-number">1.11.</span> <span class="toc-text">第十一节：sorcket练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第十二节：杂项练习"><span class="toc-number">1.12.</span> <span class="toc-text">第十二节：杂项练习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正则练习"><span class="toc-number">1.13.</span> <span class="toc-text">正则练习</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#web阶段"><span class="toc-number">2.</span> <span class="toc-text">web阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Django-xadmin-打造线上教育平台（设计概要）"><span class="toc-number">2.1.</span> <span class="toc-text">Django+xadmin 打造线上教育平台（设计概要）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#互联网-废品回收项目概要设计"><span class="toc-number">2.2.</span> <span class="toc-text">互联网+废品回收项目概要设计</span></a></li></ol></li></ol>
+</div>
+<div class="toc-button" onclick="toggleTOC(event);" ontouchstart="toggleTOC(event);">
+    <img src="/images/icons/blue-shadow/toc.svg" alt>
+</div>
+
+    </div>
+    <div class="article-content">
+    <h1 id="第一阶段"><a href="#第一阶段" class="headerlink" title="第一阶段"></a>第一阶段</h1><h2 id="第一节：字符串操作练习题"><a href="#第一节：字符串操作练习题" class="headerlink" title="第一节：字符串操作练习题"></a>第一节：字符串操作练习题</h2><ol>
+<li><p>已知字符串 a = “aAsmr3idd4bgs7Dlsf9eAF”,要求如下 </p>
+<ul>
+<li>请将a字符串的大写改为小写，小写改为大写。</li>
+<li>将a字符串的数字取出，并输出成一个新的字符串。</li>
+<li>请去除a字符串多次出现的字母，仅留最先出现的一个。例 ‘abcabb’，经过去除后，输出 ‘abc’</li>
+<li>请将a字符串反转并输出。例：’abc’的反转是’cba’</li>
+<li>去除a字符串内的数字后，请将该字符串里的单词重新排序（a-z），并且重新输出一个排序后的字符 串。（保留大小写,a与A的顺序关系为：A在a前面。例：AaBb）</li>
+<li>请判断 ‘boy’里出现的每一个字母，是否都出现在a字符串里。如果出现，则输出True，否则，则输 出False.</li>
+<li>要求如1.7，此时的单词判断，由’boy’改为四个，分别是 ‘boy’,’girl’,’bird’,’dirty’，请判断如上这4个字符串里的每个字母，是否都出现在a字符串里。</li>
+<li>输出a字符串出现频率最高的字母</li>
+</ul>
+</li>
+<li><p>在python命令行里，输入import this 以后出现的文档，统计该文档中，”be” “is” “than” 的出现次数。</p>
+</li>
+<li><p>将一句英文句子单词顺序倒序输出，但是不改变单词结构。例如：‘I am a beautiful girl’，输出为’girl beautiful aam I’</p>
+</li>
+<li><p>定义一个字符串str=’abcdefghijklmnopqrstuvwxyz’，在每个字符串前面加上序号。比如‘1a2b3c…..26z’</p>
+</li>
+<li><p>info = ‘abc’</p>
+<p>info[2] = ‘d’</p>
+<p>结果是什么，为什么会报错呢?</p>
+</li>
+<li><p>a = ‘pyer’ b = ‘apple’</p>
+<p>用字典和format方法实现：</p>
+<p>my name is pyer, i love apple.</p>
+</li>
+<li><p>请阅读string模块，并且，根据string模块的内置方法输出如下几题的答案。</p>
+<ol>
+<li><p>包含0-9的数字。</p>
+</li>
+<li><p>所有小写字母。</p>
+</li>
+<li><p>所有标点符号。</p>
+</li>
+<li><p>所有大写字母和小写字母。</p>
+</li>
+<li><p>请使用你认为最好的办法将{1}-{4}点中的字符串拼接成一个字符串。</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="第二节：序列操作练习题"><a href="#第二节：序列操作练习题" class="headerlink" title="第二节：序列操作练习题"></a>第二节：序列操作练习题</h2><ol>
+<li><p>写一段程序计算对元组的反序结果</p>
+</li>
+<li><p>已知 a = [1,2,3,6,8,9,10,14,17],请将该list转换为字符串，例如 ‘123689101417’.</p>
+</li>
+<li><p>获取用户输入（提示：请输入一个三位的数字），判断该输入是否是数字，如果不是提示“用户输入为非数字”；判断该输入是否是三位，如果不是提示“用户输入的位数不正确”；如果是将该输入转换为一个列表存储，且列表的元素为整数类型。列表中第一个元素为百位数字，第二个元素为十位数字，第三个元素为个位数字。并打印输入该列表。</p>
+</li>
+<li><p>创建一个包含1-100之间所有素数的列表，打印显示该列表；随后只保留该列表前5个数字，删除其余内容并打印输出相应结果；再将每个元素值加上100，显示列表内容。</p>
+</li>
+<li><p>生成一个长度为10000的列表，其元素为0-100之间的一个整数。</p>
+<p>1）查找第500个元素的元素值</p>
+<p>2）查找 “3”这个元素值是否包含在这个列表中，如果包含的话包含几个，如果不包含提示“列表中不存在元素3”</p>
+<p>3）找出这个列表中元素的最大值，最小值和平均值</p>
+<p>4）请用切片操作获取该列表中所有索引值为10的整数倍对应的元素形成新的列表new_list</p>
+<p>5）对new_list的元素进行排序，按照从小到大的顺序进行排列。</p>
+</li>
+<li><p>对列表[[[1],[2]],[[3],[4]],[[5],[6]]]进行平铺，要求使用列表推导式的方法，新列表中不能包含能被3整除的元素。</p>
+</li>
+<li><p>输入一段英文文章，求其长度，并求出包含多少个单词</p>
+</li>
+<li><p>输入十个成绩，进行优良中及格和不及格的统计</p>
+</li>
+</ol>
+<h2 id="第三节：字典操作习题"><a href="#第三节：字典操作习题" class="headerlink" title="第三节：字典操作习题"></a>第三节：字典操作习题</h2><ol>
+<li><p>写代码：有如下字典<br>按照要求实现每一个功能<br>dict = {“k1”:”v1”,”k2”:”v2”,”k3”:”v3”}</p>
+<ul>
+<li>请循环遍历出所有的key</li>
+<li>请循环遍历出所有的value</li>
+<li>请循环遍历出所有的key和value</li>
+<li>请在字典中增加一个键值对,”k4”:”v4”，输出添加后的字典</li>
+<li>请删除字典中键值对”k1”:”v1”,并输出删除后的结果</li>
+<li>请删除字典中键”k5”对应的键值对，如果字典中不存在键”k5”,则不报错，返回None</li>
+<li>请获取字典中”k2”对应的值</li>
+<li>请获取字典中”k6”对应的值,如果不存在，则不报错，并且让其返回None。</li>
+<li>现有dict2 = {“k1”:”v11”,”a”:”b”},通过一行操作使dict2 = {“k1”:”v1”,”k2”:”v2”,”k3”:”v3”,”a”:”b”}</li>
+</ul>
+</li>
+<li><p>组合嵌套题。写代码，有如下列表，按照要求实现每一个功能</p>
+<p>lis = [[“k”,[“qwe”,20,{“k1”:[“tt”,3,”1”]},89],”ab”]]</p>
+<ul>
+<li>将列表中的数字变成字符串”100”(用两种方法)</li>
+<li>将列表中的字符串”1”变成数字101(用两种方法)</li>
+</ul>
+</li>
+<li><p>现有一个列表li = [1,2,3,’a’,4,’c’],有一个字典(此字典是动态生成的，你并不知道他里面有多少<br>键值对，所以用dic={}模拟字典；现在需要完成这样的操作：如果该字典没有”k1”这个键，那就创建<br>这个”k1”键和对应的值(该键对应的值为空列表)，并将列表li中的索引位为奇数对应的元素，添加到<br>“k1”这个键对应的空列表中。如果该字</p>
+</li>
+<li><p>典中有”k1”这个键，且k1对应的value是列表类型。那就将该列表li<br>中的索引位为奇数对应的元素，添加到”k1”，这个键对应的值中。</p>
+</li>
+<li><p>已知字符串 a = “aAsmr3idd4bgs7Dlsf9eAF”,要求如下 </p>
+<p>请统计a字符串出现的每个字母的出现次数（忽略大小写，a与A是同一个字母），并输出成一个字典。 例 {‘a’:4,’b’:2}</p>
+</li>
+<li><p>输入10个学生的姓名和成绩构成的字典，按照成绩大小进行输出</p>
+</li>
+<li><p>输入10个学生的姓名和年龄构成的字典，读出其键和值，并分别保存输出到两个列表中</p>
+</li>
+<li><p>购物车程序：<br> 需求：启动程序，让用户输入工资，然后打印商品列表；<br> 允许用户根据商品编号购买商品；<br> 用户输入商品列表后检测余额是否足够，够就直接扣款，不够就提醒；<br> 用户可以一直购买商品，也可以直接退出，退出后打印已购买商品和余额；</p>
+</li>
+</ol>
+<h2 id="第四节：基础数据类型综合练习题"><a href="#第四节：基础数据类型综合练习题" class="headerlink" title="第四节：基础数据类型综合练习题"></a>第四节：基础数据类型综合练习题</h2><ol>
+<li>程序运行时生成一个100以内的随机数，提示用户输入，有五次机会。并根据用户输入的值进行必要的提示（猜大了、猜小了，猜对了），如果猜对则提前结束游戏，如果没有继续运行直到次数用完，并给出随机数。</li>
+<li>程序实现打印三位数的水仙花数<br>水仙花数定义：水仙花数是指一个 3 位数，它的每个位上的数字的 3次幂之和等于它本身（例如：1^3+ 5^3+3 ^3 = 153）。</li>
+<li>更进一步实现：输入一个数字ｎ一次输出小于该数字的自幂数</li>
+<li>定义一个包含用户名和密码的字典：实现用户登录，要求用户最多登录三次。超过次数则提示用户锁定并退出，成功提示登录成功，否则提示登录失败。</li>
+<li>斐波那契数列前十项<br>核心公式：f(0) = 1,f(1) = 1,f(n) = f(n-1) + f(n-2)<br>斐波那契数列指的是这样一个数列 0, 1, 1, 2, 3, 5, 8, 13,特别指出：第0项是0，第1项是第一个1。从第三项开始，每一项都等于前两项之和。</li>
+<li>输出乘法口诀表</li>
+<li>利用冒泡实现对字符串进行排序，大小通过ascii码的码值进行比较。</li>
+<li>输入“年月日”，输出是一年中的第几天</li>
+<li>有1、2、3、4个数字，能组成多少个互不相同且无重复数字的三位数？都是多少？ </li>
+<li>企业发放的奖金根据利润提成。利润(I)低于或等于10万元时，奖金可提10%；利润高于10万元，低于20万元时，低于10万元的部分按10%提成，高于10万元的部分，可可提成7.5%；20万到40万之间时，高于20万元的部分，可提成5%；40万到60万之间时高于40万元的部分，可提成3%；60万到100万之间时，高于60万元的部分，可提成1.5%，高于100万元时，超过100万元的部分按1%提成，从键盘输入当月利润I，求应发放奖金总数？</li>
+<li>数据表记录包含表索引和数值，请对表索引相同的记录进行合并，即将相同索引的数值进行求和运算，输出按照key值升序进行输出。<ul>
+<li>输入描述:先输入键值对的个数,然后输入成对的index和value值，以空格隔开</li>
+<li>输出描述:输出合并后的键值对（多行）</li>
+</ul>
+</li>
+<li>一个整数，它加上100后是一个完全平方数，再加上168又是一个完全平方数，请问该数是多少？ </li>
+<li>输入三个整数x,y,z，请把这三个数由小到大输出。</li>
+<li>有一对兔子，从出生后第3个月起每个月都生一对兔子，小兔子长到第三个月后每个月又生一对兔子，假如兔子都不死，问每个月的兔子总数为多少？</li>
+<li>判断101-200之间有多少个素数，并输出所有素数。</li>
+<li>计算1000以内的质数（质数就是只能被１和自身进行整除的整数）。 </li>
+</ol>
+<h2 id="第五节：函数基础练习题"><a href="#第五节：函数基础练习题" class="headerlink" title="第五节：函数基础练习题"></a>第五节：函数基础练习题</h2><ol>
+<li><p>编写一个函数，可以实现对序列类型进行反序并返回反序结果，要求不能影响原始数据对象。</p>
+</li>
+<li><p>编写一个函数，输入n为偶数时，调用函数求1/2+1/4+…+1/n,当输入n为奇数时，调用函数1/1+1/3+…+1/n。</p>
+</li>
+<li><p>写函数，计算传入字符串中【数字】、【字母】、【空格] 以及 【其他】的个数</p>
+</li>
+<li><p>写函数，判断用户传入的对象（字符串、列表、元组）长度是否大于5。</p>
+</li>
+<li><p>写函数，检查用户传入的对象（字符串、列表、元组）的每一个元素是否含有空内容。</p>
+</li>
+<li><p>写函数，检查传入列表的长度，如果大于2，那么仅保留前两个长度的内容，并将新内容返回给调用者。</p>
+</li>
+<li><p>写函数，检查获取传入列表或元组对象的所有奇数位索引对应的元素，并将其作为新列表返回给调用者。</p>
+</li>
+<li><p>写函数，检查传入字典的每一个value的长度,如果大于2，那么仅保留前两个长度的内容，并将新内容返回给调用者。</p>
+</li>
+<li><p>平方等式题目需求:</p>
+<blockquote>
+<p>对于一个十进制的正整数， 定义f(n)为其各位数字的平方和，如:<br>f(13) = 1<strong>2 + 3</strong>2 = 10<br>f(207) = 2<strong>2 + 0</strong>2 + 7<strong>2 = 53<br>下面给出三个正整数k，a, b,你需要计算有多少个正整数n满足a&lt;=n&lt;=b,<br>且k*f(n)=n<br>输入:<br>   第一行包含3个正整数k，a, b, k&gt;=1,  a,b&lt;=10</strong>18, a&lt;=b;<br>输出：<br>   输出对应的答案;<br>范例:<br>   输入: 51 5000 10000<br>   输出: 3</p>
+</blockquote>
+</li>
+<li><p>利用函数输出杨辉三角。</p>
+</li>
+<li><p>使用函数找出某个数字的质因数（即其因子中的质数）</p>
+</li>
+<li><p>找零问题：输入付款的钱数，以及物品的价格。钱的面值有1毛，5毛，1块，5块，10块，20块，50块，100块，使得每次找零的钱的张数和最小情况下，输出找零的每种钱的面额与数量。</p>
+</li>
+<li><p>现有不限数量的面额分别为1元，2元， 5元，10元的货币，如果要用这些货币组合成x元，求一共有多少种组合方式？请说出这类问题在算法中被称为什么问题并用代码实现。</p>
+</li>
+<li><p>写函数，允许传入一个字符串或者数组（备注：数组为元素均为数字的元组或列表），使用冒泡算法实现对其内容的排序，并返回排序结果。要求不能影响原来的数据对象。</p>
+</li>
+<li><p>写函数，专门计算图形的面积：</p>
+<ul>
+<li>其中嵌套函数，计算圆的面积，正方形的面积和长方形的面积</li>
+<li>调用函数area(‘圆形’,圆半径) 返回圆的面积</li>
+<li>调用函数area(‘正方形’,边长) 返回正方形的面积</li>
+<li>调用函数area(‘长方形’,长，宽) 返回长方形的面积</li>
+</ul>
+</li>
+</ol>
+<h2 id="第六节：函数进阶练习题"><a href="#第六节：函数进阶练习题" class="headerlink" title="第六节：函数进阶练习题"></a>第六节：函数进阶练习题</h2><ol>
+<li><p>写函数，允许传入一个字符串或者数组（备注：数组为元素均为数字的元组或列表），使用快速排序实现对其内容的排序，并返回排序结果。要求不能影响原来的数据对象。</p>
+</li>
+<li><p>森林中有一堆萝卜，五只兔子来分。<br> 第一只兔子把这堆萝卜平均分为五份，多了一个，这只兔子把多的一个扔到垃圾桶中<br> ，拿走了一份。第二只兔子把剩下的萝卜又平均分成五份，又多了一个，<br> 它同样把多的一个扔入垃圾桶中，拿走了一份，第三、第四、第五只兔子都是这样做的，</p>
+<p> 问森林中原来最少有多少个萝卜？</p>
+</li>
+<li><p>编写函数，（函数执行的时间是随机的）</p>
+<ul>
+<li>编写装饰器，为函数加上统计时间的功能</li>
+<li>编写装饰器，为函数加上认证的功能</li>
+<li>编写装饰器，为多个函数加上认证的功能（用户的账号密码来源于文件），要求登录成功一次，后续的函数都无需再输入用户名和密码 </li>
+<li>编写装饰器，判断用户是否为admin，是就执行，不是就报错</li>
+</ul>
+</li>
+</ol>
+<h2 id="第七节：高阶函数练习题"><a href="#第七节：高阶函数练习题" class="headerlink" title="第七节：高阶函数练习题"></a>第七节：高阶函数练习题</h2><ol>
+<li><p>利用map()函数，把用户输入的不规范的英文名字，变为首字母大写，其他小写的规范名字。</p>
+</li>
+<li><p>Python提供的sum()函数可以接受一个list并求和，请编写一个prod()函数，可以接受一个list并利用reduce()求积。</p>
+</li>
+<li><p>用reduce()进行函数式编程。创建一个叫average()的函数来计算每个数字集合的简单平均值。</p>
+</li>
+<li><p>利用map和reduce编写一个str2float函数，把字符串’123.456’转换成浮点数123.456</p>
+</li>
+<li><p>利用filter函数将列表中的回文数过滤出来。</p>
+</li>
+<li><p>利用filter函数将聊表中的质数过滤出来。</p>
+</li>
+<li><p>有以下数据：</p>
+<p>tiangan=[‘甲’,’乙’,’丙’,’丁’,’戊’,’己’,’庚’,’辛’,’壬’,’癸’]<br>dizhi=[‘子’,’丑’,’寅’,’卯’,’辰’,’巳’,’午’,’未’,’申’,’酉’,’戌’,’亥’]</p>
+<p>利用zip输出以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 	甲子2 	乙丑3 	丙寅4 	丁卯5 	戊辰6 	己巳7 	庚午8 	辛未9 	壬申10	癸酉11	甲戌12	乙亥13	丙子14	丁丑15	戊寅16	己卯17	庚辰18	辛巳19	壬午20	癸未21	甲申22	乙酉23	丙戌24	丁亥25	戊子26	己丑27	庚寅28	辛卯29	壬辰30	癸巳31	甲午32	乙未33	丙申34	丁酉35	戊戌36	己亥37	庚子38	辛丑39	壬寅40	癸卯41	甲辰42	乙巳43	丙午44	丁未45	戊申46	己酉47	庚戌48	辛亥49	壬子50	癸丑51	甲寅52	乙卯53	丙辰54	丁巳55	戊午56	己未57	庚申58	辛酉59	壬戌60	癸亥</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>计算两个向量之和（备注：向量为一个元素为数字的列表，向量之和为对应位置的数字之和，两条向量的元素数量不等时确实位置补０之后进行计算）</p>
+</li>
+<li><p>用filter函数处理数字列表num = [1,3,5,6,7,8]，将列表中所有的偶数筛选出来</p>
+</li>
+<li><p>如下，每个小字典的name对应股票名字，shares对应多少股，price对应股票的价格</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`portfolio ``=` `[``    ``&#123;``<span class="string">'name'</span>``: ``<span class="string">'IBM'</span>``, ``<span class="string">'shares'</span>``: ``<span class="number">100</span>``, ``<span class="string">'price'</span>``: ``<span class="number">91.1</span>``&#125;,``    ``&#123;``<span class="string">'name'</span>``: ``<span class="string">'AAPL'</span>``, ``<span class="string">'shares'</span>``: ``<span class="number">50</span>``, ``<span class="string">'price'</span>``: ``<span class="number">543.22</span>``&#125;,``    ``&#123;``<span class="string">'name'</span>``: ``<span class="string">'FB'</span>``, ``<span class="string">'shares'</span>``: ``<span class="number">200</span>``, ``<span class="string">'price'</span>``: ``<span class="number">21.09</span>``&#125;,``    ``&#123;``<span class="string">'name'</span>``: ``<span class="string">'HPQ'</span>``, ``<span class="string">'shares'</span>``: ``<span class="number">35</span>``, ``<span class="string">'price'</span>``: ``<span class="number">31.75</span>``&#125;,``    ``&#123;``<span class="string">'name'</span>``: ``<span class="string">'YHOO'</span>``, ``<span class="string">'shares'</span>``: ``<span class="number">45</span>``, ``<span class="string">'price'</span>``: ``<span class="number">16.35</span>``&#125;,``    ``&#123;``<span class="string">'name'</span>``: ``<span class="string">'ACME'</span>``, ``<span class="string">'shares'</span>``: ``<span class="number">75</span>``, ``<span class="string">'price'</span>``: ``<span class="number">115.65</span>``&#125;``]`</span><br></pre></td></tr></table></figure>
+<ul>
+<li>计算购买每支股票的总价</li>
+<li>用filter过滤出，单价大于100的股票有哪些</li>
+</ul>
+</li>
+</ol>
+<h2 id="第八节：面向对象练习题"><a href="#第八节：面向对象练习题" class="headerlink" title="第八节：面向对象练习题"></a>第八节：面向对象练习题</h2><ol>
+<li><p>类的成员变量：<br> 请定义一个交通工具(Vehicle)的类，其中有:<br> 属性：速度(speed)，体积(size)等等<br> 方法：移动(move())，设置速度(setSpeed(int speed))，加速speedUp(),减速speedDown()等等.<br> 最后在测试类Vehicle中的main()中实例化一个交通工具对象，并通过方法给它初始化speed,size的值，并且通过打印出来。另外，调用加速，减速的方法对速度进行改变。</p>
+</li>
+<li><p>定义Point类，表示二维坐标中的一个点，有属性横坐标x和纵坐标y，还有用来获取和设置坐标值，以及计算到原点距离平方值的方法。定义一个构造方法初始化x和y。在主类中创建两个点对象，分别使用两个对象调用相应方法，输出x和y的值，以及到原点距离的平方。</p>
+<ol start="3">
+<li><p>创建项目chapter3，在该项目下创建包one和包two。在one下定义类A和类B。在包two下定义类B和类C。在one.B的main方法中创建一个类A的对象a。在two.C的main方法中创建一个类A的对象a。</p>
+</li>
+<li><p>在two.B中添加方法f，定义如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f</span><span class="params">(self)</span>:</span></span><br><span class="line">    print(<span class="string">'Happy everyday.'</span>)</span><br></pre></td></tr></table></figure>
+<p>在two.C中创建two.B的对象b，并调用方法f。</p>
+</li>
+<li><p>在类A中添加四个成员变量：int型的私有变量i；float型的变量f；char型受保护变量c；double型的公有变量d。</p>
+<ul>
+<li><p>在one.B的main方法中为对象a的成员变量f和d分别赋值为2和3。</p>
+</li>
+<li><p>在two.C的main方法中为对象a的成员变量d赋值为4。</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>定义一个三角形类，具有属性三条边长a、b、c和是否为合法三角形的标记isLegal，有求周长和求面积的方法，还有一个为成员变量赋值的构造方法，在构造方法中先判断三条边长是否能构成合法的三角形。如果不能构成合法三角形就输出错误提示信息，如果能构成合法三角形，则调用方法计算并输出三角形的周长和面积。</p>
+</li>
+<li><p>编写程序, 编写一个学生类, 要求有一个计数器的属性, 统计总共实例化了多少个学生</p>
+</li>
+<li><p>编写程序, A 继承了 B, 俩个类都实现了 handle 方法, 在 A 中的 handle 方法中调用 B 的 handle 方法</p>
+</li>
+<li><p>请写一个小游戏，人狗大站，2个角色，人和狗，游戏开始后，生成2个人，3条狗，互相混战，人被狗咬了会掉血，狗被人打了也掉血，狗和人的攻击力，具备的功能都不一样。</p>
+</li>
+<li><p>按要求编写Python应用程序。</p>
+<ul>
+<li>定义Teacher类，具有属性：教师的姓名、年龄、教授的课程以及是否担任班主任，方法printInfo输出教师的姓名、年龄和所教授的课程，构造方法为成员变量赋值。</li>
+<li>定义Team类，有属性：班级名称和班主任，有一个输出班级名称的方法，另一个是构造方法，为成员变量赋值。</li>
+<li>定义主类TestTeam，创建一个班级对象，输出班级名称和班主任的详细信息。</li>
+</ul>
+</li>
+<li><p>编写程序, 如下有三点要求：</p>
+<ul>
+<li>自定义用户信息数据结构， 写入文件, 然后读取出内容, 利用json模块进行数据的序列化和反序列化</li>
+<li>定义用户类，定义方法db，例如 执行obj.db可以拿到用户数据结构</li>
+<li>在该类中实现登录、退出方法, 登录成功将状态(status)修改为True, 退出将状态修改为False(退出要判断是否处于登录状态).密码输入错误三次将设置锁定时间(下次登录如果和当前时间比较大于30秒即不允许登录)</li>
+</ul>
+<p>用户数据结构：user_info</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    "egon":&#123;"password":"123",'status':False,'timeout':0&#125;,</span><br><span class="line">    "alex":&#123;"password":"456",'status':False,'timeout':0&#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用面向对象的形式编写一个老师角色, 并实现以下功能, 获取老师列表, 创建老师、删除老师、创建成功之后通过 pickle 序列化保存到文件里，并在下一次重启程序时能<br>   读取到创建的老师, 例如程序目录结构如下.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">proj</span><br><span class="line">|-- bin/</span><br><span class="line">|   |-- start.py         程序启动文件</span><br><span class="line">|-- config/</span><br><span class="line">|   |-- settings.py     程序配置(例如: 配置存储创建老师的路径相关等)</span><br><span class="line">|-- db                  数据存储(持久化, 使得每次再重启程序时, 相关数据对应保留)</span><br><span class="line">|   |-- teachers/          存储所有老师的文件</span><br><span class="line">|   |-- ...                ...</span><br><span class="line">|-- src/                程序主体模块存放</span><br><span class="line">|   |-- __init__.py</span><br><span class="line">|   |-- teacher.py      例如: 实现老师相关功能的文件</span><br><span class="line">|   |-- group.py        例如: 实现班级相关的功能的文件</span><br><span class="line">    |-- main.py         程序运行主体程序(可进行菜单选择等)</span><br><span class="line">|-- README.md 程序说明文件</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>按以下要求定义一个乌龟类和鱼类并尝试编写游戏</p>
+<ul>
+<li><p>假设游戏场景为范围（x,y）为0&lt;=x&lt;=10,0&lt;=y&lt;=10</p>
+</li>
+<li><p>游戏生成1只乌龟和10条鱼</p>
+</li>
+<li><p>它们的移动方向均随机</p>
+</li>
+<li><p>乌龟的最大移动能力为2（它可以随机选择1还是2移动），鱼儿的最大移动能力是1</p>
+</li>
+<li><p>当移动到场景边缘，自动向反方向移动</p>
+</li>
+<li><p>乌龟初始化体力为100（上限）</p>
+</li>
+<li><p>乌龟每移动一次，体力消耗1</p>
+</li>
+<li><p>当乌龟和鱼坐标重叠，乌龟吃掉鱼，乌龟体力增加20</p>
+</li>
+<li><p>当乌龟体力值为0（挂掉）或者鱼儿的数量为0游戏结束</p>
+</li>
+</ul>
+</li>
+<li><p>定义MySQL类</p>
+<p>要求：</p>
+<ul>
+<li><p>对象有id、host、port三个属性</p>
+</li>
+<li><p>定义工具create_id，在实例化时为每个对象随机生成id，保证id唯一</p>
+</li>
+<li><p>提供两种实例化方式，方式一：用户传入host和port 方式二：从配置文件中读取host和port进行实例化</p>
+</li>
+<li><p>为对象定制方法，save和get_obj_by_id，save能自动将对象序列化到文件中，文件路径为配置文件中DB_PATH,文件名为id号，保存之前验证对象是否已经存在，若存在则抛出异常，;get_obj_by_id方法用来从文件中反序列化出对象</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="第九节：文件操作练习题"><a href="#第九节：文件操作练习题" class="headerlink" title="第九节：文件操作练习题"></a>第九节：文件操作练习题</h2><ol>
+<li><p>有名为test_file的文件，其内容格式如下，写一个程序，判断该文件中是否存在”alex”, 如果没有，则将字符串”alex”添加到该文件末尾，否则提示用户该用户已存在；</p>
+</li>
+<li><p>通过输入的文件夹名称将文件夹下的所有文件全部重命名，在每个文件名开头上加上【测试修改】</p>
+</li>
+<li><p>通过输入的文件名称备份该文件内容，且将文件名字更改成原文件名【复件】</p>
+<p>注意点：</p>
+<ul>
+<li>想要在test.txt更改成test[复件].txt先要找到点的索引值，然后将字符串切片重组</li>
+<li>尽量不要一次全部读取原文件，所以使用每次读取1024字节来读取</li>
+<li>读取或者写入文件后不要忘记关闭文件</li>
+</ul>
+</li>
+<li><p>找出文件中的不是以“#”号开头的行并输出</p>
+</li>
+<li><p>编写逐页显示文本文件的程序,用户输入一个文件名，每次默认显示行数为10行，给用户一个选项,”是否继续?(Y|N)”</p>
+</li>
+<li><p>用python实现如下功能:有一个record.txt的文档,内容:#name,age,score  tom,12,86  Lee,15,99  Lucy,11,58  Joseph,19,56 </p>
+<ul>
+<li>第一栏为姓名(name),第二栏为年纪(age),第三栏为得分(score)现在,写一个Python程序<ol>
+<li>读取文件</li>
+<li>打印如下结果:得分低于60的人都有谁?谁的名字以L开头?所有人的总分是多?</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>按照要求实现一下功能:</p>
+<ul>
+<li>要求:<ul>
+<li>可在配置文件中添加一条记录</li>
+<li>可删除配置文件中一条记录</li>
+</ul>
+</li>
+<li>增加：<ul>
+<li>用户输入以下字典类型的字符串(注意字串必须要用双引号””，因为json不能识别单引号)<br>“u_input = input({“backend”: “test.aa.com”, “record”: {“server”: “100.1.7.213”, “weight”: 20, “maxconn”: 30}})”</li>
+</ul>
+</li>
+<li>通过json.loads()模块把字符串转换成字典</li>
+<li>通过格式化配置文件，在需要添加的位置设置value的值</li>
+<li>删除：<ul>
+<li>选择用户输入需要删除的字符串,用strip()方法去除掉特殊符号</li>
+<li>按行读取配置文件，对比并排除需要删除的字符串，把排除后的数据存入列表中</li>
+</ul>
+</li>
+<li>配置文件内容参考(文件名:config.txt)：</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">global</span><br><span class="line">        log 127.0.0.1 local2</span><br><span class="line">        daemon</span><br><span class="line">        maxconn 256</span><br><span class="line">        log 127.0.0.1 local2 info</span><br><span class="line">defaults</span><br><span class="line">        log global</span><br><span class="line">        mode http</span><br><span class="line">        timeout connect 5000ms</span><br><span class="line">        timeout client 50000ms</span><br><span class="line">        timeout server 50000ms</span><br><span class="line">        option  dontlognull</span><br><span class="line"></span><br><span class="line">listen stats :8888</span><br><span class="line">        stats enable</span><br><span class="line">        stats uri       /admin</span><br><span class="line">        stats auth      admin:1234</span><br><span class="line"></span><br><span class="line">frontend aa.org</span><br><span class="line">        bind 0.0.0.0:80</span><br><span class="line">        option httplog</span><br><span class="line">        option httpclose</span><br><span class="line">        option  forwardfor</span><br><span class="line">        log global</span><br><span class="line">        acl www hdr_reg(host) -i www.aa.com</span><br><span class="line">        use_backend www.aa.com if www</span><br><span class="line"></span><br><span class="line">backend www.bb.com</span><br><span class="line">        server 100.1.7.9 100.1.7.9 weight 20 maxconn 3000</span><br><span class="line"></span><br><span class="line">        # 格式化显示</span><br><span class="line">        # server&quot;: &quot;&#123;0&#125;&quot;,&quot;weight&quot;: &#123;1&#125;,&quot;maxconn&quot;: &#123;2&#125;</span><br><span class="line"></span><br><span class="line">backend buy.cc.com</span><br><span class="line">        server 100.1.7.90 100.1.7.90 weight 20 maxconn 3000</span><br></pre></td></tr></table></figure>
+<p>3.用”w”模式打开文件（把原来文件的内容清除），循环读取列表内容，并写入文件</p>
+<ol>
+<li><p>写一个歌词解析器实现对于歌词文件的解析：</p>
+<p>歌词文件格式说明：</p>
+<ul>
+<li>lrc歌词文本中含有两类标签：<ul>
+<li>一是标识标签，其格式为“[标识名:值]”主要包含以下预定义的标签：<br>[ar:歌手名]、[ti:歌曲名]、[al:专辑名]、[by:编辑者(指lrc歌词的制作人)]、[offset:时间补偿值] （其单位是毫秒，正值表示整体提前，负值相反。这是用于总体调整显示快慢的。</li>
+<li>二是时间标签，形式为“[mm:ss]”或“[mm:ss.ff]”(分钟数:秒数.百分之一秒数 )，时间标签需位于某行歌词中的句首部分，一行歌词可以包含多个时间标签(比如歌词中的迭句部分)。当歌曲播放到达某一时间点时，MP3就会寻找对应的时间标签并显示标签后面的歌词文本，这样就完成了“歌词同步”的功能。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="第十节：进程操、线程、协程练习题"><a href="#第十节：进程操、线程、协程练习题" class="headerlink" title="第十节：进程操、线程、协程练习题"></a>第十节：进程操、线程、协程练习题</h2><ol>
+<li>计算1～100000之间所有素数和， 要求如下:<ul>
+<li>编写函数判断一个数字是否为素数，</li>
+<li>使用内置函数sum()统计所有素数和。</li>
+<li>对比1: 对比使用多进程和不使用多进程两种方法的速度。</li>
+<li>对比2：对比开启4个多进程和开启10个多进程两种方法的速度。</li>
+</ul>
+</li>
+<li>多线程小练习-利用多线程拷贝文件夹中的所有文件</li>
+<li><p>通过多线程实现类似linux中的&gt;&gt;功能，也就是将日志记录到指定的文件中。</p>
+<ul>
+<li>题目分析:<ul>
+<li>基本为main.py写主要处理逻辑，utils.py构造工具类及对应的方法。</li>
+<li>main.py:<br>定义Server()类，类中定义方法输出内容。<br>实例化工具类，启动线程，设置标准输出和错误输出至日志文件。<br>实例化Server()类并调用方法进行内容的持续输出。</li>
+</ul>
+</li>
+<li>utils.py:<br>定义工具类，工具类需要传入参数：日志名称。</li>
+<li>首先判断日志是否存在，若不存在则创建，然后写入日志；存在则追加写入日志。</li>
+<li>涉及文件读写、锁、多线程、sys模块、os模块等内容。</li>
+</ul>
+</li>
+<li><p>【扩展练习】实现主机批量管理</p>
+<ul>
+<li>主机信息配置文件用configparser解析 </li>
+<li>可批量执行命令，上传文件，结果实时返回  </li>
+<li>主机用户名密码、端口可以不同 </li>
+<li>执行远程命令使用paramiko模块 </li>
+<li>多台主机链接创建多个进程并发，单台主机上的多条执行命令使用多线程并发</li>
+</ul>
+</li>
+<li><p>请说明python中<strong>进程、线程、协程的区别</strong></p>
+</li>
+<li>使用协程计算移动平均值（移动平均值，就是指定时间段，对时间序列数据进行移动计算平均值）</li>
+</ol>
+<h2 id="第十一节：sorcket练习题"><a href="#第十一节：sorcket练习题" class="headerlink" title="第十一节：sorcket练习题"></a>第十一节：sorcket练习题</h2><ol>
+<li><p>实现多客户端，当客户端a发送消息，按下回车后，所有的客户端均会收到a的消息。</p>
+</li>
+<li><p>需求：<br>通过客户端键盘录入用户名，实现登录。<br>服务端对客户端的发送过来的用户名进行校验。<br>如果该用户存在，服务端显示用户登录，并回馈给客户端欢迎光临。<br>如果该用户不存在，服务端显示用户尝试登录，并回馈给客户端，该用户不存在。</p>
+<p>另外，客户端最多只能尝试登录三次。<br>服务端也一样作此限定。</p>
+</li>
+<li><p>简易时间服务器</p>
+<ul>
+<li>需求说明：</li>
+</ul>
+</li>
+</ol>
+<pre><code>1. 基于TCP协议实现时间响应服务器和客户端；
+
+2. 服务器端功能：
+
+   - 创建TCP服务器在指定端口(8888)上启动侦听服务器；
+
+   -  接收客户端发送的报文，并打印显示客户端(IP:端口号)；
+
+   -  同时获取本服务器时间，发送并打印显示；
+
+     <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Recv(123.123.123.123:4567): 0x12345678, 15:01:23</span><br><span class="line">Send(123.123.123.123:4567): 0x12345678, 15:01:24</span><br><span class="line">….</span><br><span class="line">….</span><br></pre></td></tr></table></figure>
+
+
+3. 客户端功能：
+
+   - 随机生成一个序列号，获取本地时间，将序列号和时间组合成报文发送给服务器，并将发送报文打印出来；
+
+   - 接收来自服务器的时间，并将接收报文打印显示；
+
+     <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Send: 0x12345678, 15:01:23</span><br><span class="line">Recv: 0x12345678, 15:01:24</span><br></pre></td></tr></table></figure>
+</code></pre><h2 id="第十二节：杂项练习"><a href="#第十二节：杂项练习" class="headerlink" title="第十二节：杂项练习"></a>第十二节：杂项练习</h2><ul>
+<li><h2 id="正则练习"><a href="#正则练习" class="headerlink" title="正则练习"></a>正则练习</h2><ol>
+<li><p>判断字符串是否是全部小写</p>
+</li>
+<li><p>去掉数字中的逗号</p>
+</li>
+<li><p>匹配一行文字中的所有开头的字母内容</p>
+</li>
+<li><p>匹配一行文字中的所有开头的数字内容</p>
+</li>
+<li><p>任一个英文的纯文本文件，统计其中的单词出现的个数。</p>
+</li>
+<li><p>抽取出文本文件中所有的email地址</p>
+</li>
+<li><p>取出一段html文本中的所有的图片地址</p>
+</li>
+<li><p>去除以下html文件中的标签，只显示文本信息。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>岗位职责：<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>完成推荐算法、数据统计、接口、后台等服务器端相关工作<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>必备要求：<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>良好的自我驱动力和职业素养，工作积极主动、结果导向<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>&amp;nbsp;<span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>技术要求：<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>1、一年以上 Python 开发经验，掌握面向对象分析和设计，了解设计模式<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>2、掌握HTTP协议，熟悉MVC、MVVM等概念以及相关WEB开发框架<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>3、掌握关系数据库开发设计，掌握 SQL，熟练使用 MySQL/PostgreSQL 中的一种<span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>4、掌握NoSQL、MQ，熟练使用对应技术解决方案<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>5、熟悉 Javascript/CSS/HTML5，JQuery、React、Vue.js<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>&amp;nbsp;<span class="tag">&lt;<span class="name">br</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>加分项：<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>大数据，数理统计，机器学习，sklearn，高性能，大并发。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将以下网址提取出域名：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">http://www.interoem.com/messageinfo.asp?id=35`</span><br><span class="line">http://3995503.com/class/class09/news_show.asp?id=14</span><br><span class="line">http://lib.wzmc.edu.cn/news/onews.asp?id=769</span><br><span class="line">http://www.zy-ls.com/alfx.asp?newsid=377&amp;id=6</span><br><span class="line">http://www.fincm.com/newslist.asp?id=415</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><h3 id="os、sys操作练习"><a href="#os、sys操作练习" class="headerlink" title="os、sys操作练习"></a>os、sys操作练习</h3><ol>
+<li>编写一个程序，能在当前目录以及当前目录的所有子目录下查找文件名包含指定字符串的文件，并打印出相对路径。</li>
+<li>批量读取指定目录下的文件名并写入txt中</li>
+<li>编写一个能实现ls输出的程序(注意：要求可以接受参数，效果和ls命令完全一致)。</li>
+</ol>
+</li>
+</ul>
+<h1 id="web阶段"><a href="#web阶段" class="headerlink" title="web阶段"></a>web阶段</h1><h2 id="Django-xadmin-打造线上教育平台（设计概要）"><a href="#Django-xadmin-打造线上教育平台（设计概要）" class="headerlink" title="Django+xadmin 打造线上教育平台（设计概要）"></a>Django+xadmin 打造线上教育平台（设计概要）</h2><p><strong>项目简介</strong></p>
+<p>　系统功能概况：</p>
+<ul>
+<li>系统具有完整的用户登录注册以及找回密码功能，拥有完整个人中心。</li>
+<li>个人中心: 修改头像，修改密码，修改邮箱，可以看到我的课程以及我的收藏。可以删除收藏，我的消息。</li>
+<li>导航栏: 公开课，授课讲师，授课机构，全局搜索。</li>
+<li>点击<code>公开课</code>–&gt; 课程列表，排序-搜索。热门课程推荐，课程的分页。</li>
+<li>点击<code>课程</code>–&gt; 课程详情页中对课程进行收藏，取消收藏。富文本展示课程内容。</li>
+<li>点击<code>开始学习</code>–&gt; 课程的章节信息，课程的评论信息。课程资源的下载链接。</li>
+<li>点击<code>授课讲师</code>–&gt;授课讲师列表页，对讲师进行人气排序以及分页，右边有讲师排行榜。</li>
+<li>点击<code>讲师的详情页面</code>–&gt; 对讲师进行收藏和分享，以及讲师的全部课程。</li>
+<li>导航栏: 授课机构有分页，排序筛选功能。</li>
+<li>机构列表页右侧有快速提交我要学习的表单。</li>
+<li>点击<code>机构</code>–&gt; 左侧：机构首页,机构课程，机构介绍，机构讲师。</li>
+<li>后台管理系统可以<code>切换主题</code>。左侧每一个功能都有列表显示, 增删改查，筛选功能。</li>
+<li>课程列表页可以对不同字段进行排序。选择多条记录进行删除操作。</li>
+<li>课程列表页：过滤器-&gt;选择字段范围等,搜索,导出csv，xml，json。</li>
+<li>课程新增页面上传图片，富文本的编辑。时间选择，添加章节，添加课程资源。</li>
+<li>日志记录：记录后台人员的操作</li>
+</ul>
+<p>　<img src="assets/1419241-20180829174338857-1660749232.png" alt="img"></p>
+<p><img src="assets/1419241-20180829174353056-1981189511.png" alt="img"></p>
+<h2 id="互联网-废品回收项目概要设计"><a href="#互联网-废品回收项目概要设计" class="headerlink" title="互联网+废品回收项目概要设计"></a>互联网+废品回收项目概要设计</h2><h3 id="需求规定"><a href="#需求规定" class="headerlink" title="需求规定"></a>需求规定</h3><ol>
+<li>用户端：下订单、订单查询、查看个人信息、修改个人信息</li>
+<li><p>回收员端：订单处理、查看获取佣金、查看个人信息、修改个人信息</p>
+</li>
+<li><p>系统管理：用户管理、回收员管理、回收物分类定价管理、交易记录查看、修改账户信息</p>
+</li>
+</ol>
+<h3 id="系统的功能结构图"><a href="#系统的功能结构图" class="headerlink" title="系统的功能结构图"></a>系统的功能结构图</h3><p><img src="assets/20180709143032339.png" alt="这里写图片描述"></p>
+<h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><p><img src="assets/2018070914301526.png" alt="这里写图片描述"></p>
+<h3 id="功能需求与程序的关系"><a href="#功能需求与程序的关系" class="headerlink" title="功能需求与程序的关系"></a>功能需求与程序的关系</h3><table>
+<thead>
+<tr>
+<th>*</th>
+<th>验证登陆程序</th>
+<th>注册信息程序</th>
+<th>个人信息修改程序</th>
+<th>订单处理程序</th>
+<th>订单相关信息查看</th>
+<th>人员添加程序</th>
+<th>人员删除程序</th>
+<th>人员信息修改程序</th>
+<th>品类添加程序</th>
+<th>定价修改程序</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>账户管理模块</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>交易系统模块</td>
+<td></td>
+<td></td>
+<td></td>
+<td>✔</td>
+<td>✔</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>系统管理模块</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+</tbody>
+</table>
+<h3 id="用户接口"><a href="#用户接口" class="headerlink" title="用户接口"></a>用户接口</h3><p>本系统提供可视化的操作方式,不提供命令控制语句进行输入控制,从而用户只需要使用鼠标进行命令操作,使用键盘输入系统接收的参数。</p>
+<p>输入输出，界面接口操作包括以下的方面：</p>
+<table>
+<thead>
+<tr>
+<th>输入信息</th>
+<th>操作和处理</th>
+<th>输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>管理员的完整的信息</td>
+<td>执行添加操作</td>
+<td>对应信息被保存</td>
+</tr>
+<tr>
+<td>指定一个管理员</td>
+<td>执行删除操作</td>
+<td>该信息被删除</td>
+</tr>
+<tr>
+<td>指定一个管理员，输入该管理员新的信息</td>
+<td>执行更改操作</td>
+<td>该管理员原来的信息被新的信息所代替</td>
+</tr>
+<tr>
+<td>用户的完整的信息</td>
+<td>执行添加操作</td>
+<td>对应信息被保存</td>
+</tr>
+<tr>
+<td>指定一个用户</td>
+<td>执行删除操作</td>
+<td>该信息被删除</td>
+</tr>
+<tr>
+<td>指定一个用户，输入该用户新的信息</td>
+<td>执行更改操作</td>
+<td>该用户原来的信息被新的信息所代替</td>
+</tr>
+<tr>
+<td>商品种类的完整的信息</td>
+<td>执行添加操作</td>
+<td>对应信息被保存</td>
+</tr>
+<tr>
+<td>指定一个商品种类</td>
+<td>执行删除操作</td>
+<td>该信息被删除</td>
+</tr>
+<tr>
+<td>指定一个商品种类，输入该商品种类新的信息</td>
+<td>执行更改操作</td>
+<td>该商品种类原来的信息被新的信息所代替</td>
+</tr>
+<tr>
+<td>商品的完整的信息</td>
+<td>执行添加操作</td>
+<td>对应信息被保存</td>
+</tr>
+<tr>
+<td>指定一个商品</td>
+<td>执行删除操作</td>
+<td>该信息被删除</td>
+</tr>
+<tr>
+<td>指定一个商品，输入该商品新的信息</td>
+<td>执行更改操作</td>
+<td>该商品原来的信息被新的信息所代替</td>
+</tr>
+<tr>
+<td>购物车具备信息</td>
+<td>执行提交操作</td>
+<td>对应信息实保存</td>
+</tr>
+<tr>
+<td>指定某件商品</td>
+<td>执行添加操作</td>
+<td>该商品被添加到收藏夹</td>
+</tr>
+<tr>
+<td>指定某件商品</td>
+<td>执行删除操作</td>
+<td>该商品在收藏夹中被删除</td>
+</tr>
+</tbody>
+</table>
+<h3 id="外部接口"><a href="#外部接口" class="headerlink" title="外部接口"></a>外部接口</h3><ol>
+<li><p>高德地图API</p>
+</li>
+<li><p>微信开放平台API</p>
+</li>
+</ol>
+<h3 id="内部接口"><a href="#内部接口" class="headerlink" title="内部接口"></a>内部接口</h3><p>输入输出，界面接口操作包括以下的方面：</p>
+<table>
+<thead>
+<tr>
+<th>输入信息</th>
+<th>操作和处理</th>
+<th>输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>管理员的完整的信息</td>
+<td>执行添加操作</td>
+<td>对应信息被保存</td>
+</tr>
+<tr>
+<td>指定一个管理员</td>
+<td>执行删除操作</td>
+<td>该信息被删除</td>
+</tr>
+<tr>
+<td>指定一个管理员，输入该管理员新的信息</td>
+<td>执行更改操作</td>
+<td>该管理员原来的信息被新的信息所代替</td>
+</tr>
+<tr>
+<td>用户的完整的信息</td>
+<td>执行添加操作</td>
+<td>对应信息被保存</td>
+</tr>
+<tr>
+<td>指定一个用户</td>
+<td>执行删除操作</td>
+<td>该信息被删除</td>
+</tr>
+<tr>
+<td>指定一个用户，输入该用户新的信息</td>
+<td>执行更改操作</td>
+<td>该用户原来的信息被新的信息所代替</td>
+</tr>
+<tr>
+<td>商品种类的完整的信息</td>
+<td>执行添加操作</td>
+<td>对应信息被保存</td>
+</tr>
+<tr>
+<td>指定一个商品种类</td>
+<td>执行删除操作</td>
+<td>该信息被删除</td>
+</tr>
+<tr>
+<td>指定一个商品种类，输入该商品种类新的信息</td>
+<td>执行更改操作</td>
+<td>该商品种类原来的信息被新的信息所代替</td>
+</tr>
+<tr>
+<td>商品的完整的信息</td>
+<td>执行添加操作</td>
+<td>对应信息被保存</td>
+</tr>
+</tbody>
+</table>
+<p>​    </p>
+<p>指定一个商品     执行删除操作     该信息被删除<br>指定一个商品，输入该商品新的信息     执行更改操作     该商品原来的信息被新的信息所代替<br>购物车具备信息     执行提交操作     对应信息实保存<br>指定某件商品     执行添加操作     该商品被添加到收藏夹</p>
+<p>指定某件商品     执行删除操作     该商品在收藏夹中被删除</p>
+
+    
+    </div>
+    
+    
+        <div class="article-comment" id="article-comment">
+            
+
+<h1>评论</h1>
+
+  
+  
+  
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80MjcxNS8xOTI2Mg==">
+  
+
+</div>
+        </div>
+        
+</article>
+  </div>
+
+  
+
+<footer id="footer">
+    <div class="footer-copyright">
+        <div>
+            <p> Copyright by <a href>ZhaoJian </a> @ 2019</p>
+            <p>Designed by: <i class="fas fa-paint-brush"></i> <a href="#">ZhaoJian</a> &bull; Powered by <a href="http://hexo.io">Hexo.</a></p>
+        </div>
+    </div>
+    
+    <div class="footer-social">
+        
+    </div>
+</footer>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <br>
+
+  <div id="footer-nav" class='footer-nav'>
+		
+
+
+
+<nav id="nav">
+	
+	
+		
+			
+				
+			
+		
+		
+	
+		
+			
+		
+		
+	
+	
+	<div class="nav-item" id="nav-item-toc">
+		
+
+
+<div class="toc-container">
+<i class="far fa-times-circle" id="toc-close" onclick="closeTOC(event);" ontouchstart="closeTOC(event);"></i>
+<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#第一阶段"><span class="toc-number">1.</span> <span class="toc-text">第一阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一节：字符串操作练习题"><span class="toc-number">1.1.</span> <span class="toc-text">第一节：字符串操作练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二节：序列操作练习题"><span class="toc-number">1.2.</span> <span class="toc-text">第二节：序列操作练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三节：字典操作习题"><span class="toc-number">1.3.</span> <span class="toc-text">第三节：字典操作习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第四节：基础数据类型综合练习题"><span class="toc-number">1.4.</span> <span class="toc-text">第四节：基础数据类型综合练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第五节：函数基础练习题"><span class="toc-number">1.5.</span> <span class="toc-text">第五节：函数基础练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第六节：函数进阶练习题"><span class="toc-number">1.6.</span> <span class="toc-text">第六节：函数进阶练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第七节：高阶函数练习题"><span class="toc-number">1.7.</span> <span class="toc-text">第七节：高阶函数练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第八节：面向对象练习题"><span class="toc-number">1.8.</span> <span class="toc-text">第八节：面向对象练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第九节：文件操作练习题"><span class="toc-number">1.9.</span> <span class="toc-text">第九节：文件操作练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第十节：进程操、线程、协程练习题"><span class="toc-number">1.10.</span> <span class="toc-text">第十节：进程操、线程、协程练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第十一节：sorcket练习题"><span class="toc-number">1.11.</span> <span class="toc-text">第十一节：sorcket练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第十二节：杂项练习"><span class="toc-number">1.12.</span> <span class="toc-text">第十二节：杂项练习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正则练习"><span class="toc-number">1.13.</span> <span class="toc-text">正则练习</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#web阶段"><span class="toc-number">2.</span> <span class="toc-text">web阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Django-xadmin-打造线上教育平台（设计概要）"><span class="toc-number">2.1.</span> <span class="toc-text">Django+xadmin 打造线上教育平台（设计概要）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#互联网-废品回收项目概要设计"><span class="toc-number">2.2.</span> <span class="toc-text">互联网+废品回收项目概要设计</span></a></li></ol></li></ol>
+</div>
+<div class="toc-button" onclick="toggleTOC(event);" ontouchstart="toggleTOC(event);">
+    <img src="/images/icons/blue-shadow/toc.svg" alt>
+</div>
+
+	</div>
+	
+	<div class="nav-item" id="nav-item-archive">
+		
+				<div class="nav-icon">
+				
+			<a href="/archives/" title="归档">
+			<img src="/images/icons/blue-shadow/archive.svg" alt>
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id="nav-item-search">
+		
+		<div class="nav-icon">
+		
+			<a href="/search/" title="搜索">
+			<img src="/images/icons/blue-shadow/search.svg" alt>
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id="nav-item-more">
+		<div class="nav-icon">
+				<a href="#" onclick="onClickMenuIcon(event);" ontouchstart="onClickMenuIcon(event);">
+				<img src="/images/icons/blue-shadow/menu.svg" alt>
+				</a>
+		</div>
+		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id="nav-more-menu-close" onclick="onClickNavMenuClose(event);" ontouchstart="onClickNavMenuClose(event);"></i>
+		
+			
+			
+				
+					
+				
+			
+				
+			
+		
+		
+			
+			
+				
+			
+				
+					
+				
+			
+		
+		
+		
+		<div class="nav-more-item">
+				<div class="nav-name">
+					<a class="nav-link" href="/categories/项目/">
+						<span>项目</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class="nav-more-item">
+				<div class="nav-name">
+					<a class="nav-link" href="/categories/笔记/">
+						<span>笔记</span>
+					</a>
+				</div>
+		</div>
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+
+  
+
+
+
+    <!-- 来必力City版安装代码 -->
+
+<script type="text/javascript">
+(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script>
+<noscript> Activate Javascript to use livere comment system. (为正常使用来必力评论功能请激活JavaScript)</noscript>
+
+<!-- City版安装代码已完成 -->
+
+
+
+
+
+    <script src="/js/lightgallery.min.js"></script>
+<script src="/js/lg-zoom.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery(); 
+        $(".article-content img").each(function(){
+            console.log($(this).attr('src'))
+            $(this).attr('data-src', $(this).attr('src')).lightGallery({
+                selector: 'this'
+            })
+        });
+    });
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+
+  
+  // update cookie if this page is opened (directly)
+  loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
+  loadjs.ready('post-version', function(){
+    
+    new Postv2('hashit_7b67d63611edf62e5aac7d581289670fda13ce28869de1f61dd08ed10258aadf').update('hashit_63860c60613ae9cdba707d1c8f181cef49398b57e26a3ca0561f33f2afb2275b', function(){});
+  });
+  
+</script>
+
+
+
+<!-- <script src="/js/post.js"></script> -->
+
+<script src="/js/headroom.min.js"></script>
+
+<script data-no-instant type="text/javascript">
+
+initHeadroom();
+
+changeLayoutOnTouchScreen();
+
+// 
+// var post = new Post('', '');
+// post.getCommentCount(window.location.pathname, function(count){
+//     $('#article-comment-count').text(count);
+// });
+// post.addVisitRecord(window.location.pathname, userip);
+// post.getVisitCount(window.location.pathname, function(count){
+//     $('#article-visit-count').text(count);
+// });
+
+// 
+</script>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/01/assets/haru01.model.json"},"display":{"position":"right","width":100,"height":200,"hOffset":20,"vOffset":20},"mobile":{"show":true},"log":false});</script></body>
+</html>

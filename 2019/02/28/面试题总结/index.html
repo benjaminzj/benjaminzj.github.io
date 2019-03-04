@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  
+      <title>面试题总结 - IZhaoJian</title>
+  
+
+  
+  
+  <meta name="description" content>
+  <meta name="author" content="ZhaoJian">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- load loadjs.js -->
+  <script src="/libs/loadjs/dist/loadjs.min.js"></script>
+
+<link rel="stylesheet" href="/libs/animate.css/animate.min.css">
+  <!-- load lightgallery -->
+<link rel="stylesheet" href="/css/lightgallery.css">
+<link rel="stylesheet" href="/libs/noty/lib/noty.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/taurus.css">
+    
+        <link rel="stylesheet" href="/css/scheme-taurus/animations.css">
+    
+
+
+<link rel="stylesheet" href="/.css">
+
+  <!-- load font awesome 5 -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+  </script>
+  <!-- load mathjax -->
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax//libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  <!-- load js-cookie -->
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/js/social-share.min.js"></script>
+    <script src="/js/theme.js"></script>
+
+  <!-- include cookie.js -->
+  
+  
+
+  <!-- include comment system code -->
+  
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+ 
+
+<header id="header" class="header">
+	<div class="header-title">
+		
+		<div class="header-logo">
+			<a href="/">
+				<img src="/images/theme-icon.svg">
+			</a>
+		</div>
+		<div class="header-text">
+			<h1>
+				<a href="/">IZhaoJian</a>
+			</h1>
+			<subtitle>
+				
+			</subtitle>
+		</div>
+		
+	</div>
+	<div id="header-nav">
+		
+
+
+
+<nav id="nav">
+	
+	
+		
+			
+		
+		
+			<div class="nav-item">
+				
+					<div class="nav-name">
+				
+					<a class="nav-link" href="/categories/项目/">
+						<span>项目 </span>
+					</a>
+				</div>
+			</div>
+		
+	
+		
+			
+		
+		
+			<div class="nav-item">
+				
+					<div class="nav-name">
+				
+					<a class="nav-link" href="/categories/笔记/">
+						<span>笔记 </span>
+					</a>
+				</div>
+			</div>
+		
+	
+	
+	<div class="nav-item" id="nav-item-toc">
+		
+
+
+<div class="toc-container">
+<i class="far fa-times-circle" id="toc-close" onclick="closeTOC(event);" ontouchstart="closeTOC(event);"></i>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、第一阶段"><span class="toc-number">1.</span> <span class="toc-text">一、第一阶段</span></a></li></ol>
+</div>
+<div class="toc-button" onclick="toggleTOC(event);" ontouchstart="toggleTOC(event);">
+    <img src="/images/icons/blue-shadow/toc.svg" alt>
+</div>
+
+	</div>
+	
+	<div class="nav-item" id="nav-item-archive">
+		
+				<div class="nav-icon">
+				
+			<a href="/archives/" title="归档">
+			<img src="/images/icons/blue-shadow/archive.svg" alt>
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id="nav-item-search">
+		
+		<div class="nav-icon">
+		
+			<a href="/search/" title="搜索">
+			<img src="/images/icons/blue-shadow/search.svg" alt>
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id="nav-item-more">
+		<div class="nav-icon">
+				<a href="#" onclick="onClickMenuIcon(event);" ontouchstart="onClickMenuIcon(event);">
+				<img src="/images/icons/blue-shadow/menu.svg" alt>
+				</a>
+		</div>
+		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id="nav-more-menu-close" onclick="onClickNavMenuClose(event);" ontouchstart="onClickNavMenuClose(event);"></i>
+		
+			
+			
+				
+					
+				
+			
+				
+			
+		
+		
+			
+			
+				
+			
+				
+					
+				
+			
+		
+		
+		
+		<div class="nav-more-item">
+				<div class="nav-name">
+					<a class="nav-link" href="/categories/项目/">
+						<span>项目</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class="nav-more-item">
+				<div class="nav-name">
+					<a class="nav-link" href="/categories/笔记/">
+						<span>笔记</span>
+					</a>
+				</div>
+		</div>
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+</header>
+
+ 
+
+  
+
+
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div style="flex: 1;">
+      <style>
+    body {
+        background-color: white;
+    }
+</style>
+
+
+
+
+
+
+
+
+    
+        
+            
+            
+        
+    
+
+
+
+
+
+
+    
+    
+        
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+
+
+<article class="article" id="/2019/02/28/面试题总结/" data-name="面试题总结" data-version>
+
+    <!-- Title -->
+    <div class="article-header">
+         
+         <h1 class="article-title">
+            <a href="/2019/02/28/面试题总结/">
+                面试题总结
+            </a>
+        </h1>
+        <!-- TODO: support nested categories,display them nicely -->
+        
+        <ul class="article-categories">
+            
+            
+                <li><a href="/categories/项目/" data-no-instant>
+                    <img src="/images/项目.svg" alt="项目" onerror="if(this.src != " images uncategorized.svg") this.src="/images/uncategorized.svg" " title="项目">
+                </a></li>
+            
+        </ul>
+        
+    </div>
+    
+    <!-- Date and Author -->
+    <div class="article-meta">
+    <ul>
+            <li><i class="fa fa-calendar"></i> 2019-02-28</li>
+            
+            <li><i class="fa fa-eye"></i> <span id="busuanzi_container_site_uv"><span id="busuanzi_value_site_uv"></span></span></li>
+            <li><i class="fa fa-user"></i> ZhaoJian</li>
+            <li><i class="fas fa-copyright"></i>
+            
+                
+                
+            
+            
+                <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
+            
+            </li>
+    </ul>
+    
+<div class="tags">
+	
+		
+			<label class="tag-1"><a href="/tags/Python/">Python</a></label>
+		
+	
+	</div>
+
+    </div>
+    <div class="article-cards">
+        <!-- Author Card -->
+        <!---
+        <div class='Card-article Card-author'>
+            <div class='card-title'>
+                <h3></h3>
+            </div>
+            <div class='card-content'>
+                    <div class="author-meta">
+                            <div class='author-figure'>
+                                <img src="" alt="">
+                            </div>
+                            <div class='author-name'>
+                                ZhaoJian
+                            </div>
+                        </div>
+                        <div class="author-ai">
+                            <div class='author-intro'>
+                                <!-- TODO: auto generating author description -->
+                                <!-- 
+                            </div>
+                            <div class="author-articles">
+                                <!-- TODO: auto generating author articles -->
+                                <!-- <ul>
+                                    <li>Article 1</li>
+                                    <li>Article 2</li>
+                                    <li>Article 3</li>
+                                    <li>Article 4</li>
+                                    <li>Article 5</li>
+                                    <li>Article 6</li>
+                                </ul>
+                            </div>
+                        </div>
+            </div>
+            
+        </div> -->
+
+        <!-- Visit Card -->
+        <!-- <div class="Card-article Card-visit"> -->
+            <!-- <div class="card-title">
+  <h3>Post Visit</h3>
+</div>
+<div class="card-chart">
+  <div id="chart-post-visit"></div>
+</div> -->
+        <!-- </div> -->
+        
+        <!-- Auto Excerpt Card -->
+        <!-- <div class="Card-article Card-excerpt">
+            <div class="card-title">
+  <h3>Quick Read</h3>
+</div>
+<div class="card-text">
+  <p id="text-post-summary">一、第一阶段1.【面试题】Python的特点：
+​    a.面向对象的【一切皆对象】
+​    b.解释性语言
+​    c.交互式语言【在终端进行命令的编程】
+​    d.跨平台的语言【没有操作系统的限制，任何的操作系统都可以运行python代码】
+Python的优缺点：
+​    优点：
+​    a.易于学习和维护【版本更新迭代】
+​    b.广泛的标准库【提供了大量的工具】
+​    c.可扩展性
+​    d.数据库【mysql，sqlites3，mongodb,redis等数据库，Python中都有对应的模块】
+​    e.GUI编程【图形化界面】
+​   ...</p>
+</div>
+        </div> -->
+    </div>
+    
+    <!-- Gallery -->
+    <!-- TODO: add a slider to gallery -->
+    
+
+    <!-- Content -->
+    <!-- TODO: support table of content -->
+    <div class="article-toc" id="article-toc">
+    
+        
+
+
+<div class="toc-container">
+<i class="far fa-times-circle" id="toc-close" onclick="closeTOC(event);" ontouchstart="closeTOC(event);"></i>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、第一阶段"><span class="toc-number">1.</span> <span class="toc-text">一、第一阶段</span></a></li></ol>
+</div>
+<div class="toc-button" onclick="toggleTOC(event);" ontouchstart="toggleTOC(event);">
+    <img src="/images/icons/blue-shadow/toc.svg" alt>
+</div>
+
+    </div>
+    <div class="article-content">
+    <h2 id="一、第一阶段"><a href="#一、第一阶段" class="headerlink" title="一、第一阶段"></a>一、第一阶段</h2><h4 id="1-【面试题】Python的特点："><a href="#1-【面试题】Python的特点：" class="headerlink" title="1.【面试题】Python的特点："></a>1.【面试题】Python的特点：</h4><blockquote>
+<p>​    a.面向对象的【一切皆对象】</p>
+<p>​    b.解释性语言</p>
+<p>​    c.交互式语言【在终端进行命令的编程】</p>
+<p>​    d.跨平台的语言【没有操作系统的限制，任何的操作系统都可以运行python代码】</p>
+<p>Python的优缺点：</p>
+<p>​    优点：</p>
+<p>​    a.易于学习和维护【版本更新迭代】</p>
+<p>​    b.广泛的标准库【提供了大量的工具】</p>
+<p>​    c.可扩展性</p>
+<p>​    d.数据库【mysql，sqlites3，mongodb,redis等数据库，Python中都有对应的模块】</p>
+<p>​    e.GUI编程【图形化界面】</p>
+<p>​    缺点：</p>
+<p>​    a.运行速度慢【和c语言比较】</p>
+<p>​    b.代码不能加密</p>
+</blockquote>
+<h4 id="2-【面试题：dict和list之间的区别】"><a href="#2-【面试题：dict和list之间的区别】" class="headerlink" title="2.【面试题：dict和list之间的区别】"></a>2.【面试题：dict和list之间的区别】</h4><blockquote>
+<p>​    1.dict查找和插入数据的速度不会因为key-value的增多而变慢而list在每次查找的时候都是从头到位进行遍历，当数据量大的时候，list速度肯定会变慢<br>​    2.dict需要占用大量的内存空间，内存浪费多而list只相当于存储了字典中的key或者value，并且list数据时紧密排列的</p>
+</blockquote>
+<h4 id="3-【面试题：简述可迭代对象和迭代器之间的区别和联系】"><a href="#3-【面试题：简述可迭代对象和迭代器之间的区别和联系】" class="headerlink" title="3.【面试题：简述可迭代对象和迭代器之间的区别和联系】"></a>3.【面试题：简述可迭代对象和迭代器之间的区别和联系】</h4><blockquote>
+<p>联系：迭代器一定时可迭代对象，可迭代对象不一定时迭代器</p>
+</blockquote>
+<h4 id="4-【面试题：栈和队列的相同点和不同点】"><a href="#4-【面试题：栈和队列的相同点和不同点】" class="headerlink" title="4.【面试题：栈和队列的相同点和不同点】"></a>4.【面试题：栈和队列的相同点和不同点】</h4><blockquote>
+<p>相同点：</p>
+<p>​    a.都是线性结构</p>
+<p>​    b.插入操作都限定在表尾进行</p>
+<p>​    c.管理模式相同</p>
+<p>​    d.插入和删除的时间复杂度都是O(1)，在空间复杂度上是一样的</p>
+<p>不同点：</p>
+<p>​    a.删除数据的位置不同，栈的删除在表尾进行，队列的删除在表头进行</p>
+<p>​    b.应用场景不同：</p>
+<p>​        栈的应用场景：变量，函数，表达式的转换或者求值</p>
+<p>​        队列的应用场景：计算机中各种资源的分配和管理</p>
+</blockquote>
+<h4 id="5-【面试题1：init和new之间的区别和联系】"><a href="#5-【面试题1：init和new之间的区别和联系】" class="headerlink" title="5.【面试题1：init和new之间的区别和联系】"></a>5.【面试题1：<strong>init</strong>和<strong>new</strong>之间的区别和联系】</h4><blockquote>
+<p>​    a.二者都是创建对象的过程中被自动调用的函数<br>​    b.如果<strong>init</strong>存在，<strong>new</strong>不存在，则调用的是<strong>init</strong>,当<strong>new</strong>和<strong>init</strong>同时存在，则调用的时new</p>
+</blockquote>
+<h4 id="6-【面试题2：构造函数和普通成员函数之间的区别和联系】"><a href="#6-【面试题2：构造函数和普通成员函数之间的区别和联系】" class="headerlink" title="6.【面试题2：构造函数和普通成员函数之间的区别和联系】"></a>6.【面试题2：构造函数和普通成员函数之间的区别和联系】</h4><blockquote>
+<p>​    相同点：<br>​        a.都是函数，都包含声明部分和实现部分<br>​        b.形参列表的第一个参数都是self，默认传的是当前的对象<br>​    不同点：<br>​    a.成员函数的函数名可以自定义，但是，构造函数的函数名时固定的，只能是<strong>init</strong><br>​    b.成员函数需要通过对象手动调用，但是，构造函数是在创建对象的过程中自动被调用的<br>​    c.对于同一个对象而言，成员函数可以被调用多次，但是，构造函数只能被调用一次</p>
+</blockquote>
+<h4 id="7-【面试题：解释下面变量的作用】"><a href="#7-【面试题：解释下面变量的作用】" class="headerlink" title="7.【面试题：解释下面变量的作用】"></a>7.【面试题：解释下面变量的作用】</h4><blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;xxx:普通变量，可以任意的访问</span><br><span class="line">&gt;_xxx:受保护的变量，在实际项目开发中，尽量不要使用</span><br><span class="line">&gt;__xxx:私有变量，只能在当前类中被直接访问__xxx__:一般用于系统的变量和函数的命名，尽量不要使用，比如 __name__, __init__, __del__等</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="8-模块copy，copy（），deepcopy（）【面试题】"><a href="#8-模块copy，copy（），deepcopy（）【面试题】" class="headerlink" title="8.模块copy，copy（），deepcopy（）【面试题】"></a>8.模块copy，copy（），deepcopy（）【面试题】</h4><blockquote>
+<p>import copy</p>
+<p>内容角度上的拷贝，copy只拷贝最外层，deepcopy可以拷贝内层的内容【二维列表中】</p>
+</blockquote>
+<h4 id="9-for循环的工作原理"><a href="#9-for循环的工作原理" class="headerlink" title="9.for循环的工作原理"></a>9.for循环的工作原理</h4><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="comment">#for循环的工作原理：通过不断调用next函数实现的</span></span><br><span class="line">&gt;list1 = [<span class="number">22</span>,<span class="number">33</span>,<span class="number">44</span>,<span class="number">55</span>,<span class="number">66</span>,<span class="number">77</span>]</span><br><span class="line">&gt;</span><br><span class="line">&gt;<span class="comment">#for</span></span><br><span class="line">&gt;<span class="comment"># for num in list1:</span></span><br><span class="line">&gt;<span class="comment">#     print(num)</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;<span class="comment">#完全等价于：next</span></span><br><span class="line">&gt;it = iter(list1)</span><br><span class="line">&gt;<span class="comment"># num1 = next(it)</span></span><br><span class="line">&gt;<span class="comment"># print(num1)</span></span><br><span class="line">&gt;<span class="comment"># num1 = next(it)</span></span><br><span class="line">&gt;<span class="comment"># print(num1)</span></span><br><span class="line">&gt;<span class="comment"># num1 = next(it)</span></span><br><span class="line">&gt;<span class="comment"># print(num1)</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;<span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">&gt;    <span class="keyword">try</span>:</span><br><span class="line">&gt;        <span class="comment">#监控区</span></span><br><span class="line">&gt;        x = next(it)</span><br><span class="line">&gt;        print(x)</span><br><span class="line">&gt;    <span class="keyword">except</span> StopIteration:</span><br><span class="line">&gt;        <span class="comment">#一旦进入except代码块，则说明迭代器中的元素已经遍历完成，则退出循环</span></span><br><span class="line">&gt;        <span class="keyword">break</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="10-交换两个变量的值"><a href="#10-交换两个变量的值" class="headerlink" title="10.交换两个变量的值"></a>10.交换两个变量的值</h4><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="comment">#需求：交换两个变量的值</span></span><br><span class="line">&gt;num1 = <span class="number">10</span></span><br><span class="line">&gt;num2 = <span class="number">20</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;<span class="comment">#方式一：交叉赋值</span></span><br><span class="line">&gt;<span class="comment"># num1,num2 = num2,num1</span></span><br><span class="line">&gt;<span class="comment"># print(num1,num2)</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;<span class="comment">#方式二：定义一个第三方变量</span></span><br><span class="line">&gt;<span class="comment"># temp = num1</span></span><br><span class="line">&gt;<span class="comment"># num1 = num2</span></span><br><span class="line">&gt;<span class="comment"># num2 = temp</span></span><br><span class="line">&gt;<span class="comment"># print(num1,num2)</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;<span class="comment">#方式三：异或</span></span><br><span class="line">&gt;<span class="comment">#规律：一个数异或另外一个数两次，得到的结果为该数本身</span></span><br><span class="line">&gt;num1 = num1 ^ num2   <span class="comment"># num1 = 10 ^ 20</span></span><br><span class="line">&gt;num2 = num1 ^ num2   <span class="comment">#num2 = 10 ^ 20  ^ 20  = 10</span></span><br><span class="line">&gt;num1 = num1 ^ num2   <span class="comment">#num3 = 10 ^ 20 ^ 10  = 20</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;<span class="comment">#方式四：加减法</span></span><br><span class="line">&gt;num1 = num1 + num2   <span class="comment">#num1 = 10 + 20</span></span><br><span class="line">&gt;num2 = num1 - num2  <span class="comment">#num2 = 10 + 20  - 20 = 10</span></span><br><span class="line">&gt;num1 = num1 - num2 <span class="comment">#num1 = 10 + 20  - 10 = 20</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;<span class="comment">#总结：在实际项目开发中，常用方式一和方式二，面试题中，使用方式一，方式三和方式四</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="11-多个装饰器作用于同一个函数"><a href="#11-多个装饰器作用于同一个函数" class="headerlink" title="11.多个装饰器作用于同一个函数"></a>11.多个装饰器作用于同一个函数</h4><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="function"><span class="keyword">def</span> <span class="title">wrapper11</span><span class="params">(func)</span>:</span></span><br><span class="line">&gt;    <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">(*args,**kwargs)</span>:</span></span><br><span class="line">&gt;        <span class="comment">#新增的功能</span></span><br><span class="line">&gt;        print(<span class="string">"装饰器~~~~11"</span>)</span><br><span class="line">&gt;        <span class="comment">#调用原函数</span></span><br><span class="line">&gt;        func(*args,**kwargs)</span><br><span class="line">&gt;    <span class="keyword">return</span>  inner</span><br><span class="line">&gt;</span><br><span class="line">&gt;<span class="function"><span class="keyword">def</span> <span class="title">wrapper22</span><span class="params">(func)</span>:</span></span><br><span class="line">&gt;    <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">(*args,**kwargs)</span>:</span></span><br><span class="line">&gt;        <span class="comment">#新增的功能</span></span><br><span class="line">&gt;        print(<span class="string">"装饰器~~~~22"</span>)</span><br><span class="line">&gt;        <span class="comment">#调用原函数</span></span><br><span class="line">&gt;        func(*args,**kwargs)</span><br><span class="line">&gt;    <span class="keyword">return</span>  inner</span><br><span class="line">&gt;</span><br><span class="line">&gt;@wrapper11    <span class="comment">#func:check</span></span><br><span class="line">&gt;@wrapper22      <span class="comment">#func:被wrapper11装饰之后的函数</span></span><br><span class="line">&gt;<span class="function"><span class="keyword">def</span> <span class="title">check</span><span class="params">()</span>:</span></span><br><span class="line">&gt;    print(<span class="string">"check"</span>)</span><br><span class="line">&gt;</span><br><span class="line">&gt;check()</span><br><span class="line">&gt;<span class="comment">#总结：多个装饰器作用于同一个函数的时候，从上往下依次执行，但是，原函数只被调用一次</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="12-【面试题：简述global和nonlocal的作用，举例说明】"><a href="#12-【面试题：简述global和nonlocal的作用，举例说明】" class="headerlink" title="12.【面试题：简述global和nonlocal的作用，举例说明】"></a>12.【面试题：简述global和nonlocal的作用，举例说明】</h4><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="comment">#nonlocal；前提条件：必须使用在闭包中</span></span><br><span class="line">&gt;x = <span class="number">0</span>  <span class="comment">#全局作用域</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;<span class="function"><span class="keyword">def</span> <span class="title">outer</span><span class="params">()</span>:</span></span><br><span class="line">&gt;    x = <span class="number">1</span>       <span class="comment">#函数作用域</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;    <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">()</span>:</span></span><br><span class="line">&gt;        <span class="comment">#将一个局部作用域的变量声明为不是局部的，局部----》函数</span></span><br><span class="line">&gt;        <span class="keyword">nonlocal</span> x</span><br><span class="line">&gt;        x = <span class="number">2</span>   <span class="comment">#局部作用域</span></span><br><span class="line">&gt;        print(<span class="string">"inner:"</span>,x)</span><br><span class="line">&gt;</span><br><span class="line">&gt;     <span class="comment">#在外部函数中调用内部函数</span></span><br><span class="line">&gt;    inner()</span><br><span class="line">&gt;</span><br><span class="line">&gt;    print(<span class="string">"outer:"</span>,x)</span><br><span class="line">&gt;</span><br><span class="line">&gt;outer()</span><br><span class="line">&gt;</span><br><span class="line">&gt;print(<span class="string">"global:"</span>,x)</span><br><span class="line">&gt;<span class="string">"""</span></span><br><span class="line"><span class="string">&gt;inner: 2</span></span><br><span class="line"><span class="string">&gt;outer: 1  -----&gt;2</span></span><br><span class="line"><span class="string">&gt;global: 0</span></span><br><span class="line"><span class="string">&gt;"""</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;<span class="comment">#全局变量</span></span><br><span class="line">&gt;num1 = <span class="number">4</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;<span class="function"><span class="keyword">def</span> <span class="title">func1</span><span class="params">()</span>:</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;    <span class="comment">#声明num1是全局变量的num1</span></span><br><span class="line">&gt;    <span class="keyword">global</span>  num1</span><br><span class="line">&gt;    print(num1)   <span class="comment">#4</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;    <span class="comment">#局部作用域</span></span><br><span class="line">&gt;    num1 = <span class="number">20</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;func1()</span><br><span class="line">&gt;</span><br><span class="line">&gt;a = <span class="number">10</span></span><br><span class="line">&gt;<span class="function"><span class="keyword">def</span> <span class="title">test</span><span class="params">()</span>:</span></span><br><span class="line">&gt;    <span class="keyword">global</span>  a</span><br><span class="line">&gt;    a = a + <span class="number">1</span></span><br><span class="line">&gt;    print(a)   <span class="comment">#UnboundLocalError: local variable 'a' referenced before assignment</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;test()</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="13-继承树和方法解析"><a href="#13-继承树和方法解析" class="headerlink" title="13.继承树和方法解析"></a>13.继承树和方法解析</h4><blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="comment"># 【如果类与类之间存在复杂的继承关系：单继承，多继承，一个子类也可以是另外一个类的父类，则将不再遵循单层解析的原则】</span></span><br><span class="line">&gt;<span class="comment">#父类</span></span><br><span class="line">&gt;<span class="class"><span class="keyword">class</span> <span class="title">BaseClass</span><span class="params">(object)</span>:</span></span><br><span class="line">&gt;    <span class="function"><span class="keyword">def</span> <span class="title">show</span><span class="params">(self)</span>:</span></span><br><span class="line">&gt;        print(<span class="string">"BaseClass"</span>)</span><br><span class="line">&gt;<span class="comment">#子类</span></span><br><span class="line">&gt;<span class="class"><span class="keyword">class</span> <span class="title">SubClassA</span><span class="params">(BaseClass)</span>:</span></span><br><span class="line">&gt;    <span class="function"><span class="keyword">def</span> <span class="title">show</span><span class="params">(self)</span>:</span></span><br><span class="line">&gt;        print(<span class="string">"enter subclass~~~~A"</span>)</span><br><span class="line">&gt;        super().show()</span><br><span class="line">&gt;        print(<span class="string">"exit   subclass~~~~A"</span>)</span><br><span class="line">&gt;<span class="class"><span class="keyword">class</span> <span class="title">SubClassB</span><span class="params">(BaseClass)</span>:</span></span><br><span class="line">&gt;    <span class="function"><span class="keyword">def</span> <span class="title">show</span><span class="params">(self)</span>:</span></span><br><span class="line">&gt;        print(<span class="string">"enter subclass~~~~B"</span>)</span><br><span class="line">&gt;        super().show()</span><br><span class="line">&gt;        print(<span class="string">"exit   subclass~~~~B"</span>)</span><br><span class="line">&gt;<span class="class"><span class="keyword">class</span> <span class="title">SubClassC</span><span class="params">(SubClassA)</span>:</span></span><br><span class="line">&gt;    <span class="function"><span class="keyword">def</span> <span class="title">show</span><span class="params">(self)</span>:</span></span><br><span class="line">&gt;        print(<span class="string">"enter subclass~~~~C"</span>)</span><br><span class="line">&gt;        super().show()</span><br><span class="line">&gt;        print(<span class="string">"exit   subclass~~~~C"</span>)</span><br><span class="line">&gt;<span class="class"><span class="keyword">class</span> <span class="title">SubClassD</span><span class="params">(SubClassB,SubClassC)</span>:</span></span><br><span class="line">&gt;    <span class="function"><span class="keyword">def</span> <span class="title">show</span><span class="params">(self)</span>:</span></span><br><span class="line">&gt;        print(<span class="string">"enter subclass~~~~D"</span>)</span><br><span class="line">&gt;        super().show()</span><br><span class="line">&gt;        print(<span class="string">"exit   subclass~~~~D"</span>)</span><br><span class="line">&gt;s = SubClassD()</span><br><span class="line">&gt;s.show()</span><br><span class="line">&gt;</span><br><span class="line">&gt;<span class="string">"""</span></span><br><span class="line"><span class="string">&gt;enter subclass~~~~D</span></span><br><span class="line"><span class="string">&gt;enter subclass~~~~B</span></span><br><span class="line"><span class="string">&gt;enter subclass~~~~C</span></span><br><span class="line"><span class="string">&gt;enter subclass~~~~A</span></span><br><span class="line"><span class="string">&gt;BaseClass</span></span><br><span class="line"><span class="string">&gt;exit   subclass~~~~A</span></span><br><span class="line"><span class="string">&gt;exit   subclass~~~~C</span></span><br><span class="line"><span class="string">&gt;exit   subclass~~~~B</span></span><br><span class="line"><span class="string">&gt;exit   subclass~~~~D</span></span><br><span class="line"><span class="string">&gt;"""</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;<span class="string">"""</span></span><br><span class="line"><span class="string">&gt;多继承树，如果在中间层某类有向上一层解析的迹象，则会把本层平级的其他类方法解析完，返回再接着解析</span></span><br><span class="line"><span class="string">&gt;</span></span><br><span class="line"><span class="string">&gt;D----&gt;B,B有向上解析的迹象，所以解析C———》A----&gt;BaseClass</span></span><br><span class="line"><span class="string">&gt;"""</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="14-【面试题：简述实例属性和类属性之间的区别】"><a href="#14-【面试题：简述实例属性和类属性之间的区别】" class="headerlink" title="14.【面试题：简述实例属性和类属性之间的区别】"></a>14.【面试题：简述实例属性和类属性之间的区别】</h4><blockquote>
+<p>​    a.定义的位置不同：类属性直接定义在类中，实例属性定义在构造函数中</p>
+<p>​    b.访问方式不同：实例属性必须通过对象访问，类属性可以通过对象或者类名访问</p>
+<p>​    c.在内存中出现的时机不同：类属性随着类的加载而出现，实例属性随着对象的创建而出现</p>
+<p>​    d.优先级不同：如果类属性和实例属性重名的情况下：对象访问，则优先访问实例属性</p>
+</blockquote>
+<h4 id="15-面向对象于面向过程的区别"><a href="#15-面向对象于面向过程的区别" class="headerlink" title="15.面向对象于面向过程的区别"></a>15.面向对象于面向过程的区别</h4><blockquote>
+<p>面向过程：<br>​    思路：问题是怎样一步一步解决的，然后亲力亲为的去解决问题【执行者】<br>​    代码：代码从上往下依次执行<br>面向对象：<br>​    思路：将复杂的问题简单化，找到一个具有特殊功能的个体，然后委托这个个体帮忙完成某件事情【指挥者】<br>​    代码：类和对象【核心】</p>
+</blockquote>
+<h4 id="16-类于对象的区别和联系"><a href="#16-类于对象的区别和联系" class="headerlink" title="16.类于对象的区别和联系"></a>16.类于对象的区别和联系</h4><blockquote>
+<p>类：将多个具有相同特征和行为的对象进行抽取，抽取其中相同的特征和行为，形成一个类，类是一个抽象的存在<br>对象：将类具体化【在一个类中，具体的存在】<br>联系：不严谨的理解，包含关系【在代码中，先定义类，然后再通过类创建对象】</p>
+</blockquote>
+<h4 id="17-面向对象语言三大特征"><a href="#17-面向对象语言三大特征" class="headerlink" title="17.面向对象语言三大特征"></a>17.面向对象语言三大特征</h4><blockquote>
+<p>封装：一个类的某些属性，在使用的过程中，如果不希望外界可以直接访问它，就可以将该属性作为私有的【private：私有的，public：公开的】，然后暴露给外界一个访问的方法即可【对属性进行间接访问】</p>
+<p>继承：什么是继承：有一个子类和父类，子类可以继承父类中所有未被私有化的属性和方法</p>
+<p>多态：【定义时的类型和运行的类型不一致，也就是说，定义时不确定调用的时哪个方法，只有运行之后才能进行确定调用的时哪个方法】</p>
+<p>注意：继承是多态的前提</p>
+</blockquote>
+<h4 id="18-成员方法、类方法和静态方法"><a href="#18-成员方法、类方法和静态方法" class="headerlink" title="18.成员方法、类方法和静态方法"></a>18.成员方法、类方法和静态方法</h4><blockquote>
+<p>类方法和静态方法</p>
+<p>成员方法：定义在类中的方法，被称为成员函数</p>
+<p>类方法：在一个类中，如果一个方法被@classmethod装饰器装饰</p>
+<p>​    a.可以使用对象进行调用，也可以使用类名调用</p>
+<p>​    b.类方法是属于整个类，并不属于某个具体的对象，则在类方法中不能出现self，替代self的是一个cls的参数，代表的是当前类，在类方法中通过cls创建对象，也可以通过cls调用类中的其他的类方法</p>
+<p>​    self：当前对象</p>
+<p>​    cls：当前类</p>
+<p>静态方法：在一个类中，如果一个方法被@staticmethod装饰器修饰</p>
+<p>​    a.类似于类方法，可以使用对象调用，也可以使用类型调用</p>
+<p>​    b.参数部分没有任何限定，不需要出现self，也不需要出现cls</p>
+</blockquote>
+
+    
+    </div>
+    
+    
+        <div class="article-comment" id="article-comment">
+            
+
+<h1>评论</h1>
+
+  
+  
+  
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80MjcxNS8xOTI2Mg==">
+  
+
+</div>
+        </div>
+        
+</article>
+  </div>
+
+  
+
+<footer id="footer">
+    <div class="footer-copyright">
+        <div>
+            <p> Copyright by <a href>ZhaoJian </a> @ 2019</p>
+            <p>Designed by: <i class="fas fa-paint-brush"></i> <a href="#">ZhaoJian</a> &bull; Powered by <a href="http://hexo.io">Hexo.</a></p>
+        </div>
+    </div>
+    
+    <div class="footer-social">
+        
+    </div>
+</footer>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <br>
+
+  <div id="footer-nav" class='footer-nav'>
+		
+
+
+
+<nav id="nav">
+	
+	
+		
+			
+				
+			
+		
+		
+	
+		
+			
+		
+		
+	
+	
+	<div class="nav-item" id="nav-item-toc">
+		
+
+
+<div class="toc-container">
+<i class="far fa-times-circle" id="toc-close" onclick="closeTOC(event);" ontouchstart="closeTOC(event);"></i>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、第一阶段"><span class="toc-number">1.</span> <span class="toc-text">一、第一阶段</span></a></li></ol>
+</div>
+<div class="toc-button" onclick="toggleTOC(event);" ontouchstart="toggleTOC(event);">
+    <img src="/images/icons/blue-shadow/toc.svg" alt>
+</div>
+
+	</div>
+	
+	<div class="nav-item" id="nav-item-archive">
+		
+				<div class="nav-icon">
+				
+			<a href="/archives/" title="归档">
+			<img src="/images/icons/blue-shadow/archive.svg" alt>
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id="nav-item-search">
+		
+		<div class="nav-icon">
+		
+			<a href="/search/" title="搜索">
+			<img src="/images/icons/blue-shadow/search.svg" alt>
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id="nav-item-more">
+		<div class="nav-icon">
+				<a href="#" onclick="onClickMenuIcon(event);" ontouchstart="onClickMenuIcon(event);">
+				<img src="/images/icons/blue-shadow/menu.svg" alt>
+				</a>
+		</div>
+		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id="nav-more-menu-close" onclick="onClickNavMenuClose(event);" ontouchstart="onClickNavMenuClose(event);"></i>
+		
+			
+			
+				
+					
+				
+			
+				
+			
+		
+		
+			
+			
+				
+			
+				
+					
+				
+			
+		
+		
+		
+		<div class="nav-more-item">
+				<div class="nav-name">
+					<a class="nav-link" href="/categories/项目/">
+						<span>项目</span>
+					</a>
+				</div>
+		</div>
+		
+		<div class="nav-more-item">
+				<div class="nav-name">
+					<a class="nav-link" href="/categories/笔记/">
+						<span>笔记</span>
+					</a>
+				</div>
+		</div>
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+
+  
+
+
+
+    <!-- 来必力City版安装代码 -->
+
+<script type="text/javascript">
+(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script>
+<noscript> Activate Javascript to use livere comment system. (为正常使用来必力评论功能请激活JavaScript)</noscript>
+
+<!-- City版安装代码已完成 -->
+
+
+
+
+
+    <script src="/js/lightgallery.min.js"></script>
+<script src="/js/lg-zoom.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery(); 
+        $(".article-content img").each(function(){
+            console.log($(this).attr('src'))
+            $(this).attr('data-src', $(this).attr('src')).lightGallery({
+                selector: 'this'
+            })
+        });
+    });
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+
+  
+  // update cookie if this page is opened (directly)
+  loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
+  loadjs.ready('post-version', function(){
+    
+    new Postv2('hashit_8cc542e55fcf1cbd6f6860b0548cbdf31f9e033feeb3733435ac6ff90f5b9fae').update('hashit_c7e2e8d20f95dd1c3f393683f93fb5e25aa28935cee8afad3d940eb3cb82dbb3', function(){});
+  });
+  
+</script>
+
+
+
+<!-- <script src="/js/post.js"></script> -->
+
+<script src="/js/headroom.min.js"></script>
+
+<script data-no-instant type="text/javascript">
+
+initHeadroom();
+
+changeLayoutOnTouchScreen();
+
+// 
+// var post = new Post('', '');
+// post.getCommentCount(window.location.pathname, function(count){
+//     $('#article-comment-count').text(count);
+// });
+// post.addVisitRecord(window.location.pathname, userip);
+// post.getVisitCount(window.location.pathname, function(count){
+//     $('#article-visit-count').text(count);
+// });
+
+// 
+</script>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/01/assets/haru01.model.json"},"display":{"position":"right","width":100,"height":200,"hOffset":20,"vOffset":20},"mobile":{"show":true},"log":false});</script></body>
+</html>
