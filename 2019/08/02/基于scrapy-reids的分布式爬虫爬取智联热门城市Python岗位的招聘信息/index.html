@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  
+      <title>基于scrapy-reids的分布式爬虫爬取智联热门城市Python岗位的招聘信息 - IZhaoJian's Blog</title>
+  
+
+  
+  
+  <meta name="description" content>
+  <meta name="author" content="ZhaoJian">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- load loadjs.js -->
+  <script src="/libs/loadjs/dist/loadjs.min.js"></script>
+
+<link rel="stylesheet" href="/libs/animate.css/animate.min.css">
+  <!-- load lightgallery -->
+<link rel="stylesheet" href="/css/lightgallery.css">
+<link rel="stylesheet" href="/libs/noty/lib/noty.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+    <link rel="stylesheet" href="/css/taurus.css">
+    
+        <link rel="stylesheet" href="/css/scheme-taurus/animations.css">
+    
+
+
+<link rel="stylesheet" href="/.css">
+
+  <!-- load font awesome 5 -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+  </script>
+  <!-- load mathjax -->
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax//libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  <!-- load js-cookie -->
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="/js/social-share.min.js"></script>
+    <script src="/js/theme.js"></script>
+
+  <!-- include cookie.js -->
+  
+  
+
+  <!-- include comment system code -->
+  
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+ 
+
+<header id="header" class="header">
+	<div class="header-title">
+		
+		<div class="header-logo">
+			<a href="/">
+				<img src="/images/theme-icon.svg">
+			</a>
+		</div>
+		<div class="header-text">
+			<h1>
+				<a href="/">IZhaoJian's Blog</a>
+			</h1>
+			<subtitle>
+				極
+			</subtitle>
+		</div>
+		
+	</div>
+	<div id="header-nav">
+		
+
+
+
+<nav id="nav">
+	
+	
+		
+			
+		
+		
+			<div class="nav-item">
+				
+					<div class="nav-name">
+				
+					<a class="nav-link" href="/categories/项目/">
+						<span>项目 </span>
+					</a>
+				</div>
+			</div>
+		
+	
+		
+			
+		
+		
+			<div class="nav-item">
+				
+					<div class="nav-name">
+				
+					<a class="nav-link" href="/categories/笔记/">
+						<span>笔记 </span>
+					</a>
+				</div>
+			</div>
+		
+	
+	
+	<div class="nav-item" id="nav-item-toc">
+		
+
+
+<div class="toc-container">
+<i class="far fa-times-circle" id="toc-close" onclick="closeTOC(event);" ontouchstart="closeTOC(event);"></i>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备"><span class="toc-number">1.</span> <span class="toc-text">准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分析"><span class="toc-number">2.</span> <span class="toc-text">分析</span></a></li></ol>
+</div>
+<div class="toc-button" onclick="toggleTOC(event);" ontouchstart="toggleTOC(event);">
+    <img src="/images/icons/blue-shadow/toc.svg" alt>
+</div>
+
+	</div>
+	
+	<div class="nav-item" id="nav-item-archive">
+		
+				<div class="nav-icon">
+				
+			<a href="/archives/" title="归档">
+			<img src="/images/icons/blue-shadow/archive.svg" alt>
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id="nav-item-search">
+		
+		<div class="nav-icon">
+		
+			<a href="/search/" title="搜索">
+			<img src="/images/icons/blue-shadow/search.svg" alt>
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id="nav-item-more">
+		<div class="nav-icon">
+				<a href="#" onclick="onClickMenuIcon(event);" ontouchstart="onClickMenuIcon(event);">
+				<img src="/images/icons/blue-shadow/menu.svg" alt>
+				</a>
+		</div>
+		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id="nav-more-menu-close" onclick="onClickNavMenuClose(event);" ontouchstart="onClickNavMenuClose(event);"></i>
+		
+			
+			
+				
+			
+		
+			<div class="nav-more-item">
+					<div class="nav-name">
+						<a class="nav-link" href="/categories/项目/">
+							<span>项目</span>
+						</a>
+					</div>
+			</div>
+		
+		
+			
+			
+				
+					
+				
+			
+		
+		
+		
+		<div class="nav-more-item">
+				<div class="nav-name">
+					<a class="nav-link" href="/categories/笔记/">
+						<span>笔记</span>
+					</a>
+				</div>
+		</div>
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+</header>
+
+ 
+
+  
+
+
+
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div style="flex: 1;">
+      <style>
+    body {
+        background-color: white;
+    }
+</style>
+
+
+
+
+
+
+
+
+    
+        
+            
+            
+        
+    
+
+
+
+
+
+
+    
+    
+        
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+
+
+<article class="article" id="/2019/08/02/基于scrapy-reids的分布式爬虫爬取智联热门城市Python岗位的招聘信息/" data-name="基于scrapy-reids的分布式爬虫爬取智联热门城市Python岗位的招聘信息" data-version>
+
+    <!-- Title -->
+    <div class="article-header">
+         
+         <div class="article-logo">
+            <a href="#" data-no-instant>
+                <img src="/images/jdenticon/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.png" alt onerror="if(this.src != " images uncategorized.svg") this.src="/images/uncategorized.svg" ">
+            </a>
+         </div>
+         
+         <h1 class="article-title">
+            <a href="/2019/08/02/基于scrapy-reids的分布式爬虫爬取智联热门城市Python岗位的招聘信息/">
+                基于Scrapy-reids的分布式爬虫爬取智联热门城市Python岗位的招聘信息
+            </a>
+        </h1>
+        <!-- TODO: support nested categories,display them nicely -->
+        
+        <ul class="article-categories">
+            
+            
+                <li><a href="/categories/笔记/" data-no-instant>
+                    <img src="/images/笔记.svg" alt="笔记" onerror="if(this.src != " images uncategorized.svg") this.src="/images/uncategorized.svg" " title="笔记">
+                </a></li>
+            
+        </ul>
+        
+    </div>
+    
+    <!-- Date and Author -->
+    <div class="article-meta">
+    <ul>
+            <li><i class="fa fa-calendar"></i> 2019-08-02</li>
+            
+            <li><i class="fa fa-eye"></i><span id="busuanzi_value_page_pv"></span></li>
+            <li><i class="fa fa-user"></i> ZhaoJian</li>
+            <li><i class="fas fa-copyright"></i>
+            
+                
+                
+            
+            
+                <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
+            
+            </li>
+    </ul>
+    
+<div class="tags">
+	
+		
+			<label class="tag-1"><a href="/tags/Python3，爬虫/">Python3，爬虫</a></label>
+		
+	
+		
+			<label class="tag-2"><a href="/tags/scrapy-redis/">Scrapy-redis</a></label>
+		
+	
+	</div>
+
+    </div>
+    <div class="article-cards">
+        <!-- Author Card -->
+        <!---
+        <div class='Card-article Card-author'>
+            <div class='card-title'>
+                <h3></h3>
+            </div>
+            <div class='card-content'>
+                    <div class="author-meta">
+                            <div class='author-figure'>
+                                <img src="" alt="">
+                            </div>
+                            <div class='author-name'>
+                                ZhaoJian
+                            </div>
+                        </div>
+                        <div class="author-ai">
+                            <div class='author-intro'>
+                                <!-- TODO: auto generating author description -->
+                                <!-- 
+                            </div>
+                            <div class="author-articles">
+                                <!-- TODO: auto generating author articles -->
+                                <!-- <ul>
+                                    <li>Article 1</li>
+                                    <li>Article 2</li>
+                                    <li>Article 3</li>
+                                    <li>Article 4</li>
+                                    <li>Article 5</li>
+                                    <li>Article 6</li>
+                                </ul>
+                            </div>
+                        </div>
+            </div>
+            
+        </div> -->
+
+        <!-- Visit Card -->
+        <!-- <div class="Card-article Card-visit"> -->
+            <!-- <div class="card-title">
+  <h3>Post Visit</h3>
+</div>
+<div class="card-chart">
+  <div id="chart-post-visit"></div>
+</div> -->
+        <!-- </div> -->
+        
+        <!-- Auto Excerpt Card -->
+        <!-- <div class="Card-article Card-excerpt">
+            <div class="card-title">
+  <h3>Quick Read</h3>
+</div>
+<div class="card-text">
+  <p id="text-post-summary">...</p>
+</div>
+        </div> -->
+    </div>
+    
+    <!-- Gallery -->
+    <!-- TODO: add a slider to gallery -->
+    
+
+    <!-- Content -->
+    <!-- TODO: support table of content -->
+    <div class="article-toc" id="article-toc">
+    
+        
+
+
+<div class="toc-container">
+<i class="far fa-times-circle" id="toc-close" onclick="closeTOC(event);" ontouchstart="closeTOC(event);"></i>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备"><span class="toc-number">1.</span> <span class="toc-text">准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分析"><span class="toc-number">2.</span> <span class="toc-text">分析</span></a></li></ol>
+</div>
+<div class="toc-button" onclick="toggleTOC(event);" ontouchstart="toggleTOC(event);">
+    <img src="/images/icons/blue-shadow/toc.svg" alt>
+</div>
+
+    </div>
+    <div class="article-content">
+    <p>最近温习了一下scrapy-redis分布式爬虫，所以自己写了一个小例子爬取了智联热门城市的Python岗位招聘信息，所谓分布式爬虫，简单理解就是多台主机一起爬取信息，这里简单说一下原理，当多台主机的爬虫程序启动之后，都会去redis中指定的库中获取请求路径，拿到路径之后就开始爬虫的流程，如果数据库中没有请求路径，则所有的程序都会等待我们放入路径。在使用分布式爬虫之前，最好还是对scrapy爬虫框架有一定的了解。</p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ol>
+<li>python3环境</li>
+<li>scrapy框架</li>
+<li>scrapy-redis库</li>
+<li>一台or多台主机</li>
+<li>redis数据库(注意：一定要打开远程访问权限，不然别的主机访问不到请求队列)</li>
+</ol>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>首先我们打开智联，在搜索框中输入python，就会看到很多条招聘信息，但是一定要注意，这些信息是通过ajax加载的，在网页的源代码中是没有的，所以我们不能直接获取网页源代码提取，这里提供两种思路</p>
+<h3 id="1-通过selenium模拟用户操作，得到网页源码提取数据"><a href="#1-通过selenium模拟用户操作，得到网页源码提取数据" class="headerlink" title="1. 通过selenium模拟用户操作，得到网页源码提取数据"></a>1. 通过selenium模拟用户操作，得到网页源码提取数据</h3><p>这种方法理解起来很容易，但是比较麻烦，同时会比较浪费时间，使用selenium请求路径，但是要注意，第一次打开网页的时候会跳出一个模态框，需要点击之后或者按下esc才可以进行下一步操作，可以等待其加载完毕之后通过selenium模拟完成，接着一直模拟点击下一页，切换城市返回源码提取数据即可</p>
+<h3 id="2-分析ajax链接，直接请求ajax的链接得到json数据，解析数据"><a href="#2-分析ajax链接，直接请求ajax的链接得到json数据，解析数据" class="headerlink" title="2. 分析ajax链接，直接请求ajax的链接得到json数据，解析数据"></a>2. 分析ajax链接，直接请求ajax的链接得到json数据，解析数据</h3><p>重点说一下这个方法，在招聘信息页面之后，打开浏览器开发者模式，选择Network，然后选择XHR，就可以看到很多信息，如下图<br><img src="https://izhaojian-blog.oss-cn-beijing.aliyuncs.com/zhilian/R95YYJEIQD8QDGFZPWDK.png" alt="zhuabao"><br>下面的这些信息就是我们需要的东西，然后从这些信息中找到数据所在的接口地址<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://fe-api.zhaopin.com/c/i/sou?start=90&amp;pageSize=90&amp;cityId=%s&amp;salary=0,0&amp;workExperience=-1&amp;education=-1&amp;companyType=-1&amp;employmentType=-1&amp;jobWelfareTag=-1&amp;kw=python&amp;kt=3&amp;=0&amp;at=ad352d86a99e49ffb0bec89a8190a5af&amp;rt=0f8efd11216e4d829c7e926ddc7ec9ae&amp;_v=0.13686198&amp;userCode=1014643112&amp;x-zp-page-request-id=1e460842c4264f2ea916f762c5be9382-1573296744354-714218&amp;x-zp-client-id=029d82cf-668a-4293-bd50-978c776e77a4&amp;MmEwMD=4d_mFOVgu9f.ChujeP2YSoZ974TQ0uX0R_7_RzJziMEMCXe4MiDBjnDnrqg0TFSsoLEWwovH6iu8U2pKHuSt4bBtLXGWsbYnZ16JrOP2iibDqsv13HfkqB_l9hW0TFEHsk1coeHyqeqPeaXs0CP2T5EoHqh_EH.Tr._uO3YID1KVHmt6Tccu7hbDxAL2M0aE1jlvYEXPQ2zNOQ7.b082o89Up27K6fv.Qh4CQ6RGUCA0MDaCEt4HndLNZ4pmURLgkzyTCmgOm5kVQJ5MXPZvh7MFwRfqUE_ZLfqOXaFjttS11kblKRqB.B_c8NneirV9RhU.kXRd8vCtWS.ukxIgfOzV1wj5qLLgJsZ2sh0mKbBDFO4VNtGgMbUwMGNCBfskCn41s_OxJQ0S1rqumcVmAQIr4&amp;</span><br></pre></td></tr></table></figure></p>
+<p>上面这个链接就是我们需要的路径啦，同时一个路径就是一页数据，其中有一些参数不是必须的，所以所以可以省略掉，这个大家可以自己去尝试一下。先着重解释一下几个参数：</p>
+<ul>
+<li>start  每一页数据开始的位置</li>
+<li>pageSize  每一页数据的条数</li>
+<li>cityId  城市id</li>
+</ul>
+<p>可以看出，每一页有90条数据，那么start参数的值也应该就是90的倍数。</p>
+<h3 id="3-实现"><a href="#3-实现" class="headerlink" title="3. 实现"></a>3. 实现</h3><p>在使用分布式爬虫之前，我们要先需要爬取的地址放到redis的队列里面，以供爬虫能够在队列中拿取到请求路径。上一步中我们已经知道访问api接口可以直接获取到数据，那么就可以写一个Python脚本，将所有热门城市的所有页的api接口存到redis中，具体实现代码如下<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> redis</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AddUrls</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, address_list)</span>:</span></span><br><span class="line">        self.address_list = address_list</span><br><span class="line">        self.r = redis.Redis(host=<span class="string">"localhost"</span>, port=<span class="number">6379</span>, db=<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">join_url</span><span class="params">(self)</span>:</span></span><br><span class="line"></span><br><span class="line">        headers_dict = &#123;</span><br><span class="line">            <span class="string">"User-Agent"</span>: <span class="string">"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36"</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> self.address_list:</span><br><span class="line">            start = <span class="number">0</span></span><br><span class="line">            <span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">                url = <span class="string">"https://fe-api.zhaopin.com/c/i/sou?start=%s&amp;pageSize=90&amp;cityId=%s&amp;salary=0,0&amp;workExperience=-1&amp;education=-1&amp;companyType=-1&amp;employmentType=-1&amp;jobWelfareTag=-1&amp;kw=python&amp;kt=3&amp;=0&amp;at=ad352d86a99e49ffb0bec89a8190a5af&amp;rt=0f8efd11216e4d829c7e926ddc7ec9ae&amp;_v=0.13686198&amp;userCode=1014643112&amp;x-zp-page-request-id=1e460842c4264f2ea916f762c5be9382-1573296744354-714218&amp;x-zp-client-id=029d82cf-668a-4293-bd50-978c776e77a4&amp;MmEwMD=4d_mFOVgu9f.ChujeP2YSoZ974TQ0uX0R_7_RzJziMEMCXe4MiDBjnDnrqg0TFSsoLEWwovH6iu8U2pKHuSt4bBtLXGWsbYnZ16JrOP2iibDqsv13HfkqB_l9hW0TFEHsk1coeHyqeqPeaXs0CP2T5EoHqh_EH.Tr._uO3YID1KVHmt6Tccu7hbDxAL2M0aE1jlvYEXPQ2zNOQ7.b082o89Up27K6fv.Qh4CQ6RGUCA0MDaCEt4HndLNZ4pmURLgkzyTCmgOm5kVQJ5MXPZvh7MFwRfqUE_ZLfqOXaFjttS11kblKRqB.B_c8NneirV9RhU.kXRd8vCtWS.ukxIgfOzV1wj5qLLgJsZ2sh0mKbBDFO4VNtGgMbUwMGNCBfskCn41s_OxJQ0S1rqumcVmAQIr4&amp;"</span> % (start, i)</span><br><span class="line">                result = requests.get(url, headers=headers_dict).json()</span><br><span class="line">                start += <span class="number">90</span></span><br><span class="line">                <span class="keyword">if</span> result[<span class="string">"data"</span>][<span class="string">"results"</span>]:</span><br><span class="line">                    self.r.lpush(<span class="string">"zhilian"</span>, url)</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    address_list = [<span class="string">"703"</span>, <span class="string">"530"</span>, <span class="string">"538"</span>, <span class="string">"765"</span>, <span class="string">"763"</span>, <span class="string">"531"</span>, <span class="string">"801"</span>, <span class="string">"653"</span>, <span class="string">"736"</span>, <span class="string">"600"</span>, <span class="string">"613"</span>, <span class="string">"664"</span>, <span class="string">"773"</span>,<span class="string">"635"</span>, <span class="string">"702"</span>, <span class="string">"639"</span>, <span class="string">"599"</span>, <span class="string">"854"</span>, <span class="string">"719"</span>, <span class="string">"749"</span>, <span class="string">"551"</span>, <span class="string">"622"</span>, <span class="string">"636"</span>, <span class="string">"654"</span>, <span class="string">"681"</span>, <span class="string">"682"</span>, <span class="string">"565"</span>]</span><br><span class="line">    add = AddUrls(address_list)</span><br><span class="line">    add.join_url()</span><br></pre></td></tr></table></figure></p>
+<p>爬虫实现代码如下：</p>
+<p>爬虫文件zl.py<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"><span class="keyword">from</span> scrapy <span class="keyword">import</span> Request</span><br><span class="line"><span class="keyword">from</span> scrapy.http <span class="keyword">import</span> HtmlResponse</span><br><span class="line"><span class="keyword">from</span> scrapy_redis.spiders <span class="keyword">import</span> RedisSpider</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> ZhilProject.items <span class="keyword">import</span> ZhilprojectItem</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ZlSpider</span><span class="params">(RedisSpider)</span>:</span></span><br><span class="line">    name = <span class="string">'zl'</span></span><br><span class="line">    allowed_domains = [<span class="string">'zhaopin.com'</span>]</span><br><span class="line">    <span class="comment"># start_urls = ['https://sou.zhaopin.com/?jl=703&amp;sf=0&amp;st=0&amp;kw=python&amp;kt=3']</span></span><br><span class="line">    redis_key = <span class="string">"zhilian"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(self, response: HtmlResponse)</span>:</span></span><br><span class="line">        data = json.loads(response.text)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> data[<span class="string">"data"</span>][<span class="string">"results"</span>]:</span><br><span class="line">            item = ZhilprojectItem()</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                item[<span class="string">"number"</span>] = i[<span class="string">"number"</span>]</span><br><span class="line">                item[<span class="string">"position"</span>] = i[<span class="string">"jobName"</span>]</span><br><span class="line">                item[<span class="string">"salary"</span>] = i[<span class="string">"salary"</span>]</span><br><span class="line">                item[<span class="string">"address"</span>] = i[<span class="string">"city"</span>][<span class="string">"items"</span>][<span class="number">0</span>][<span class="string">"name"</span>]</span><br><span class="line">                item[<span class="string">"date"</span>] = i[<span class="string">"updateDate"</span>]</span><br><span class="line">                item[<span class="string">"experience"</span>] = i[<span class="string">"workingExp"</span>][<span class="string">"name"</span>]</span><br><span class="line">                item[<span class="string">"education"</span>] = i[<span class="string">"eduLevel"</span>][<span class="string">"name"</span>]</span><br><span class="line">                item[<span class="string">"corporate_name"</span>] = i[<span class="string">"company"</span>][<span class="string">"name"</span>]</span><br><span class="line">                item[<span class="string">"c_type"</span>] = i[<span class="string">"company"</span>][<span class="string">"type"</span>][<span class="string">"name"</span>]</span><br><span class="line">                item[<span class="string">"scale"</span>] = i[<span class="string">"company"</span>][<span class="string">"size"</span>][<span class="string">"name"</span>]</span><br><span class="line">                <span class="keyword">yield</span> item</span><br><span class="line">            <span class="keyword">except</span>:</span><br><span class="line">                item[<span class="string">"number"</span>] = <span class="string">""</span></span><br><span class="line">                item[<span class="string">"position"</span>] = <span class="string">""</span></span><br><span class="line">                item[<span class="string">"salary"</span>] = <span class="string">""</span></span><br><span class="line">                item[<span class="string">"address"</span>] = <span class="string">""</span></span><br><span class="line">                item[<span class="string">"date"</span>] = <span class="string">""</span></span><br><span class="line">                item[<span class="string">"experience"</span>] = <span class="string">""</span></span><br><span class="line">                item[<span class="string">"education"</span>] = <span class="string">""</span></span><br><span class="line">                item[<span class="string">"corporate_name"</span>] = <span class="string">""</span></span><br><span class="line">                item[<span class="string">"c_type"</span>] = <span class="string">""</span></span><br><span class="line">                item[<span class="string">"scale"</span>] = <span class="string">""</span></span><br><span class="line">                <span class="keyword">yield</span> item</span><br></pre></td></tr></table></figure></p>
+<p>items.py<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"><span class="keyword">from</span> scrapy <span class="keyword">import</span> Request</span><br><span class="line"><span class="keyword">from</span> scrapy.http <span class="keyword">import</span> HtmlResponse</span><br><span class="line"><span class="keyword">from</span> scrapy_redis.spiders <span class="keyword">import</span> RedisSpider</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> ZhilProject.items <span class="keyword">import</span> ZhilprojectItem</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ZlSpider</span><span class="params">(RedisSpider)</span>:</span></span><br><span class="line">    name = <span class="string">'zl'</span></span><br><span class="line">    allowed_domains = [<span class="string">'zhaopin.com'</span>]</span><br><span class="line">    <span class="comment"># start_urls = ['https://sou.zhaopin.com/?jl=703&amp;sf=0&amp;st=0&amp;kw=python&amp;kt=3']</span></span><br><span class="line">    redis_key = <span class="string">"zhilian"</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(self, response: HtmlResponse)</span>:</span></span><br><span class="line">        data = json.loads(response.text)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> data[<span class="string">"data"</span>][<span class="string">"results"</span>]:</span><br><span class="line">            item = ZhilprojectItem()</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                item[<span class="string">"number"</span>] = i[<span class="string">"number"</span>]</span><br><span class="line">                item[<span class="string">"position"</span>] = i[<span class="string">"jobName"</span>]</span><br><span class="line">                item[<span class="string">"salary"</span>] = i[<span class="string">"salary"</span>]</span><br><span class="line">                item[<span class="string">"address"</span>] = i[<span class="string">"city"</span>][<span class="string">"items"</span>][<span class="number">0</span>][<span class="string">"name"</span>]</span><br><span class="line">                item[<span class="string">"date"</span>] = i[<span class="string">"updateDate"</span>]</span><br><span class="line">                item[<span class="string">"experience"</span>] = i[<span class="string">"workingExp"</span>][<span class="string">"name"</span>]</span><br><span class="line">                item[<span class="string">"education"</span>] = i[<span class="string">"eduLevel"</span>][<span class="string">"name"</span>]</span><br><span class="line">                item[<span class="string">"corporate_name"</span>] = i[<span class="string">"company"</span>][<span class="string">"name"</span>]</span><br><span class="line">                item[<span class="string">"c_type"</span>] = i[<span class="string">"company"</span>][<span class="string">"type"</span>][<span class="string">"name"</span>]</span><br><span class="line">                item[<span class="string">"scale"</span>] = i[<span class="string">"company"</span>][<span class="string">"size"</span>][<span class="string">"name"</span>]</span><br><span class="line">                <span class="keyword">yield</span> item</span><br><span class="line">            <span class="keyword">except</span>:</span><br><span class="line">                item[<span class="string">"number"</span>] = <span class="string">""</span></span><br><span class="line">                item[<span class="string">"position"</span>] = <span class="string">""</span></span><br><span class="line">                item[<span class="string">"salary"</span>] = <span class="string">""</span></span><br><span class="line">                item[<span class="string">"address"</span>] = <span class="string">""</span></span><br><span class="line">                item[<span class="string">"date"</span>] = <span class="string">""</span></span><br><span class="line">                item[<span class="string">"experience"</span>] = <span class="string">""</span></span><br><span class="line">                item[<span class="string">"education"</span>] = <span class="string">""</span></span><br><span class="line">                item[<span class="string">"corporate_name"</span>] = <span class="string">""</span></span><br><span class="line">                item[<span class="string">"c_type"</span>] = <span class="string">""</span></span><br><span class="line">                item[<span class="string">"scale"</span>] = <span class="string">""</span></span><br><span class="line">                <span class="keyword">yield</span> item</span><br></pre></td></tr></table></figure></p>
+<p>pipelines.py<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ZhilprojectPipeline</span><span class="params">(object)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.conn = pymysql.Connect(</span><br><span class="line">            host=<span class="string">"localhost"</span>,</span><br><span class="line">            port=<span class="number">3306</span>,</span><br><span class="line">            user=<span class="string">'数据库用户名'</span>,</span><br><span class="line">            password=<span class="string">'数据库密码'</span>,</span><br><span class="line">            database=<span class="string">'zhilian'</span>,</span><br><span class="line">            charset=<span class="string">'utf8'</span></span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">process_item</span><span class="params">(self, item, spider)</span>:</span></span><br><span class="line">        cursor = self.conn.cursor()</span><br><span class="line">        sql = <span class="string">'insert into python(number, job_name, corporate_name, salary, date, address, experience, education, c_type, scale) values ("&#123;&#125;", "&#123;&#125;", "&#123;&#125;", "&#123;&#125;", "&#123;&#125;", "&#123;&#125;", "&#123;&#125;", "&#123;&#125;", "&#123;&#125;", "&#123;&#125;")'</span>.format(</span><br><span class="line">            item[<span class="string">"number"</span>], item[<span class="string">"position"</span>], item[<span class="string">"corporate_name"</span>], item[<span class="string">"salary"</span>], item[<span class="string">"date"</span>], item[<span class="string">"address"</span>], item[<span class="string">"experience"</span>], item[<span class="string">"education"</span>], item[<span class="string">"c_type"</span>], item[<span class="string">"scale"</span>]</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            cursor.execute(sql)</span><br><span class="line">            self.conn.commit()</span><br><span class="line">            print(<span class="string">"插入成功"</span>)</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            print(<span class="string">"插入失败："</span>, e)</span><br><span class="line">            self.conn.rollback()</span><br><span class="line">        cursor.close()</span><br><span class="line">        <span class="keyword">return</span> item</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">close_spider</span><span class="params">(self, spider)</span>:</span></span><br><span class="line">        self.conn.close()</span><br></pre></td></tr></table></figure></p>
+<p>settings.py<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">BOT_NAME = <span class="string">'ZhilProject'</span></span><br><span class="line"></span><br><span class="line">SPIDER_MODULES = [<span class="string">'ZhilProject.spiders'</span>]</span><br><span class="line">NEWSPIDER_MODULE = <span class="string">'ZhilProject.spiders'</span></span><br><span class="line"></span><br><span class="line">USER_AGENT = <span class="string">'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36'</span></span><br><span class="line"></span><br><span class="line">ROBOTSTXT_OBEY = <span class="keyword">False</span></span><br><span class="line"></span><br><span class="line">DOWNLOAD_DELAY = <span class="number">3</span></span><br><span class="line"></span><br><span class="line">ITEM_PIPELINES = &#123;</span><br><span class="line">    <span class="string">'ZhilProject.pipelines.ZhilprojectPipeline'</span>: <span class="number">300</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">SCHEDULER = <span class="string">"scrapy_redis.scheduler.Scheduler"</span>  <span class="comment"># 该调度器，可以使请求队列放在redis中</span></span><br><span class="line">DUPEFILTER_CLASS = <span class="string">"scrapy_redis.dupefilter.RFPDupeFilter"</span>  <span class="comment"># 去重配置</span></span><br><span class="line">SCHEDULER_PERSIST = <span class="keyword">True</span>  <span class="comment"># 持久化，不清理redis队列</span></span><br><span class="line">REDIS_HOST = <span class="string">"localhost"</span></span><br><span class="line">REDIS_PORT = <span class="number">6379</span></span><br></pre></td></tr></table></figure></p>
+<p>注意！这是Master端的配置文件，Slaver端的配置文件需要将redis的地址修改为Master端的ip</p>
+<p>配置完成之后，找至少两台主机先运行之前的脚本将请求路径存到redis中去，然后启动Master端与Slaver端，就可以实现分布式爬虫啦！</p>
+
+    
+    </div>
+    
+    
+        <div class="article-comment" id="article-comment">
+            
+
+<h1>评论</h1>
+
+  
+  
+  
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80MjcxNS8xOTI2Mg==">
+  
+
+</div>
+        </div>
+        
+</article>
+
+
+  </div>
+
+  
+
+<footer id="footer">
+    <div class="footer-copyright">
+        <div>
+            <p> Copyright by <a href>ZhaoJian </a> @ 2019</p>
+            <p>Designed by: <i class="fas fa-paint-brush"></i> <a href="#">ZhaoJian</a> &bull; Powered by <a href="http://hexo.io">Hexo.</a></p>
+        </div>
+    </div>
+    
+    <div class="footer-social">
+        
+            
+                
+                    <div class="footer-social-item"><a href="https://github.com/benjaminzj" target="_blank"><i class="fab fa-github fa-2x" aria-hidden="true"></i></a></div>
+                
+            
+        
+    </div>
+</footer>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <br>
+
+  <div id="footer-nav" class='footer-nav'>
+		
+
+
+
+<nav id="nav">
+	
+	
+		
+			
+				
+			
+		
+		
+	
+		
+			
+		
+		
+	
+	
+	<div class="nav-item" id="nav-item-toc">
+		
+
+
+<div class="toc-container">
+<i class="far fa-times-circle" id="toc-close" onclick="closeTOC(event);" ontouchstart="closeTOC(event);"></i>
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备"><span class="toc-number">1.</span> <span class="toc-text">准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分析"><span class="toc-number">2.</span> <span class="toc-text">分析</span></a></li></ol>
+</div>
+<div class="toc-button" onclick="toggleTOC(event);" ontouchstart="toggleTOC(event);">
+    <img src="/images/icons/blue-shadow/toc.svg" alt>
+</div>
+
+	</div>
+	
+	<div class="nav-item" id="nav-item-archive">
+		
+				<div class="nav-icon">
+				
+			<a href="/archives/" title="归档">
+			<img src="/images/icons/blue-shadow/archive.svg" alt>
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id="nav-item-search">
+		
+		<div class="nav-icon">
+		
+			<a href="/search/" title="搜索">
+			<img src="/images/icons/blue-shadow/search.svg" alt>
+			</a>
+		</div>
+	</div>
+	<div class="nav-item" id="nav-item-more">
+		<div class="nav-icon">
+				<a href="#" onclick="onClickMenuIcon(event);" ontouchstart="onClickMenuIcon(event);">
+				<img src="/images/icons/blue-shadow/menu.svg" alt>
+				</a>
+		</div>
+		<div class="nav-more-menu">
+				<i class="far fa-times-circle" id="nav-more-menu-close" onclick="onClickNavMenuClose(event);" ontouchstart="onClickNavMenuClose(event);"></i>
+		
+			
+			
+				
+			
+		
+			<div class="nav-more-item">
+					<div class="nav-name">
+						<a class="nav-link" href="/categories/项目/">
+							<span>项目</span>
+						</a>
+					</div>
+			</div>
+		
+		
+			
+			
+				
+					
+				
+			
+		
+		
+		
+		<div class="nav-more-item">
+				<div class="nav-name">
+					<a class="nav-link" href="/categories/笔记/">
+						<span>笔记</span>
+					</a>
+				</div>
+		</div>
+		
+	</div>
+	</div>
+</nav>
+
+	</div>
+
+  
+
+
+
+    <!-- 来必力City版安装代码 -->
+
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+
+<!-- City版安装代码已完成 -->
+
+
+
+
+
+    <script src="/js/lightgallery.min.js"></script>
+<script src="/js/lg-zoom.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#lightgallery").lightGallery(); 
+        $(".article-content img").each(function(){
+            console.log($(this).attr('src'))
+            $(this).attr('data-src', $(this).attr('src')).lightGallery({
+                selector: 'this'
+            })
+        });
+    });
+</script>
+
+
+
+
+
+
+<script type="text/javascript">
+
+  
+  // update cookie if this page is opened (directly)
+  loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
+  loadjs.ready('post-version', function(){
+    
+    new Postv2('hashit_823b4eb00961dec335690c45bcf4fed39996eb4afb9e0adc2ab47f7b6542a60f').update('hashit_4e8dfec2a3e7687465ad153b28bf78653317709b2e2ed93747ad3a70a56b972b', function(){});
+  });
+  
+</script>
+
+
+
+<!-- <script src="/js/post.js"></script> -->
+
+<script src="/js/headroom.min.js"></script>
+
+<script data-no-instant type="text/javascript">
+
+initHeadroom();
+
+changeLayoutOnTouchScreen();
+
+// 
+// var post = new Post('', '');
+// post.getCommentCount(window.location.pathname, function(count){
+//     $('#article-comment-count').text(count);
+// });
+// post.addVisitRecord(window.location.pathname, userip);
+// post.getVisitCount(window.location.pathname, function(count){
+//     $('#article-visit-count').text(count);
+// });
+
+// 
+</script>
+
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/01/assets/haru01.model.json"},"display":{"position":"right","width":100,"height":200,"hOffset":5,"vOffset":0},"mobile":{"show":true},"log":false});</script></body>
+</html>
